@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+
+<header>
+	
+<nav>
+	<div class="logo"> </div>
+	<img src="D:\MiniProject\20230428_161017.png" alt="Logo" height="50px" width="250px">
+	<div class="menu">
+		<a href="#" style="font-size: ">Home</a>
+		<a href="#">Colleges</a>
+		<a href="https://www.kitcoek.in/" target="_blank">about</a>
+		<a href="#">contact</a>
+	</div>
+	
+</nav>
+{{a}}
+<form method="post" enctype="multipart/form-data" action="predict">
+{% csrf_token %}
+	<main>
+		<section>
+			<h3>Welcome To CollegeVista</h3>
+			<h1>MHT-CET College Predictor</h1>
+<div>
+			<label for="pet-select">Choose a Caste:</label>
+
+<select name="Cast" id="pet-select">
+    <option value="">--Please Select a Category--</option>
+    <option value="sc">SC</option>
+    <option value="st">ST</option>
+    <option value="obc">OBC</option>
+    <option value="vjnt">VJNT</option>
+    <option value="open">OPEN</option>
+    <option value="nt1">NT1</option>
+    <option value="nt2">NT2</option>
+    <option value="ews">EWS</option>
+</select><br><br>
+
+<form class="w3-container">
+
+	<label>Enter Percentile</label>
+	<input class="number_input" type="float" >
+</form><br><br>
+	<input class="w3-radio" type="radio" name="gender" value="male" checked>
+      <label>Male</label>
+
+      <input class="w3-radio" type="radio" name="gender" value="female">
+      <label>Female</label>
+
+      <input class="w3-radio" type="radio" name="gender" value="" disabled>
+      <label>Other</label>
+
+</div>
+			<input type ="submit" value="submit" ></div>
+		</section>
+	</main>
+</form>
+
+</header>
+
+</body>
+</html>
