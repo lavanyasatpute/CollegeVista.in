@@ -22,14 +22,14 @@ model1=model.fit(f, data["Sr.No."])
 joblib.dump(model1, "trainModel.pkl")
 
 # Load model from file
-classifer = joblib.load("trainModel.pkl")
+#classifer = joblib.load("trainModel.pkl")
 
 
 #prediction(50)
-j=classifer.predict([[55]])
+j=model1.predict([[55]])
 q = int(''.join(map(str, j-1)))
 result = data.iloc[q:,0]
 print(result)
 
 joblib.dump(data, "trainModel2.pkl")
-ram=joblib.load("trainModel.pkl")
+#ram=joblib.load("trainModel.pkl")

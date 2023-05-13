@@ -6,6 +6,12 @@
 <body>
     <h1>Branch Prediction Result</h1>
     <p>College: Kolhapur Institute of Technology (Autonomus), kolhapur</p>
-    <p>Branch: {{ result }}</p>
+    <p>Branch:
+    </p>
 </body>
+<ul>
+    {% for item in pavan %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
 </html>

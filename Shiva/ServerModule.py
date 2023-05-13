@@ -22,4 +22,4 @@ def prediction(x):
     return result
 
 #prediction(50)
-print(prediction(50))
+#print(prediction(50))
