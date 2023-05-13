@@ -1,11 +1,11 @@
-﻿CourseName,Sr.No.,OBC
-Computer Science and engineering,1,92.2
-CSE(DS),2,87.42
-CSE(AIML),3,87.42
-CSBS,4,81.51
-Electronics and Telecommunication Engineering,5,81.41
-Bio Technology,6,64.89
-Electrical engineering,7,63.55
-Mechanical Engineering,8,32.21
-Civil Engineering,9,14.99
-Environmental Engineering,10,5.56
+﻿Sr.No.,CourseName,OBC
+1,Computer Science and engineering,92.2
+2,CSE(DS),87.42
+3,CSE(AIML),87.42
+4,CSBS,81.51
+5,Electronics and Telecommunication Engineering,81.41
+6,Bio Technology,64.89
+7,Electrical engineering,63.55
+8,Mechanical Engineering,32.21
+9,Civil Engineering,14.99
+10,Environmental Engineering,5.56

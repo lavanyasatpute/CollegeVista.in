@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-45=s$ven&vr(@%zy*+&ncjh-+u8@f#p^r4ry6rqu14zg_7gf5e
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    
 ]
 
 
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 
 ]
 
 ROOT_URLCONF = 'collegevista.urls'

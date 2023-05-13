@@ -21,8 +21,8 @@ def about(request):
 def predict(request):
     if request.method == 'POST':
         Percentile = request.POST.get('Percentile')
-        #global result
-        pavan = lavanya(Percentile)
+        cast = request.POST.get('cast')
+        pavan = lavanya(Percentile,cast)
         print('pavan:', pavan)
         Context = {'pavan':pavan}
         # Process the imported data

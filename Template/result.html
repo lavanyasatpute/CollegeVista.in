@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Branch Prediction Result</title>
-</head>
-<body>
-    <h1>Branch Prediction Result</h1>
-    <p>College: Kolhapur Institute of Technology (Autonomus), kolhapur</p>
-    <p>Branch:
-    </p>
-</body>
-<ul>
-    {% for item in pavan %}
-        <li>{{ item }}</li>
-    {% endfor %}
-</ul>
+    <head>
+        <title>Branch Prediction Result</title>
+    </head>
+    <body>
+        <h1>Branch Prediction Result</h1>
+        <p>College: Kolhapur Institute of Technology (Autonomous), Kolhapur</p>
+        <form method="post">
+            {% csrf_token %}
+            <p>Branch:</p>
+            <ul>
+                {% for item in pavan %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </form>
+    </body>
 </html>
