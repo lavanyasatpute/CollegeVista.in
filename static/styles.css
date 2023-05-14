@@ -112,9 +112,12 @@
     section .btntwo {
       background: #00b894;
       color: white;
+      padding: 16px 40px; /* Adjust the padding values as needed */
+      font-size: 18px; /* Adjust the font size as needed */
     }
     
     .btntwo:hover {
       background: #fff;
       color: #000;
     }
+    

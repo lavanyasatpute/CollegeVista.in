@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title></title>
+            <link rel="stylesheet" type="text/css" href="static/styles.css">
+      </head>
+      <body>
+            <header>
+                  <nav>
+                        <div class="logo"> </div>
+                        <img src="static\CollegeVistaLogo.jpeg" alt="Logo" height="50px" width="250px">
+                        <div class="menu">
+                              <a href="D:\MiniProject\home.html" style="font-size: ">Home</a>
+                              <a href="Collegesdata.html">Colleges</a>
+                              <a href="#" target="_blank">about</a>
+                              <a href="#">contact</a>
+                        </div><br><br>
+                  </nav>
+                  <main>
+                        <section>
+			<h3>Welcome To CollegeVista</h3>
+                  <h1>: Prediction Based On Your Percentile :</h1>
+                  <p>{% for item in pavan %}
+                        <li>{{ item }}</li>
+                    {% endfor %}</p>
+                        </section>
+
+                  </main>
+            </header>
+      </body>
+</html>

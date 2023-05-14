@@ -28,7 +28,7 @@ def predict(request):
         # Process the imported data
         # You can perform any necessary operations on the imported data here
         
-        return render(request, 'result.html', Context)
+        return render(request, 'NewResult.html', Context)
 
     
 
