@@ -1,6 +1,6 @@
 * {
-      margin: 0;
-      padding: 0;
+      margin: 5;
+      padding: 5;
       box-sizing: border-box;
       font-family: "Josefin Sans", sans-serif;
     }
@@ -27,9 +27,9 @@
     
     .logo img {
       width: 250px;
-      height: : 50px;
+      height:  50px;
       text-align: center;
-      padding: :left 5%;
+      padding: right 2%;
     }
     
     nav .menu {
@@ -110,10 +110,10 @@
       align-content: center;
     }
     section .btntwo {
-      background: #00b894;
-      color: white;
+      background: #060707;
+      color: rgb(253, 249, 249);
       padding: 16px 40px; /* Adjust the padding values as needed */
-      font-size: 18px; /* Adjust the font size as needed */
+      font-size: 10px; /* Adjust the font size as needed */
     }
     
     .btntwo:hover {

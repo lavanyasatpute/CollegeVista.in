@@ -4,65 +4,56 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="static/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
-
-<header>
-	
-<nav>
-	<div class="logo"> </div>
-	<img src="static\CollegeVistaLogo.jpeg" alt="Logo" height="50px" width="250px">
-	<div class="menu">
-		<a href="#" style="font-size: ">Home</a>
-		<a href="#">Colleges</a>
-		<a href="https://www.kitcoek.in/" target="_blank">about</a>
-		<a href="#">contact</a>
-	</div>
-	
-</nav>
-<form method="post" enctype="multipart/form-data" action="predict">
-{% csrf_token %}
-	<main>
-		<section>
-			<h3>Welcome To CollegeVista</h3>
-			<h1>MHT-CET College Predictor</h1>
-<div>
-			<label for="pet-select">Choose a Caste:</label>
-
-	<select name="cast" id="cast">
-		<option value="">--Please Select a Category--</option>
-		<option value="SC">SC</option>
-		<option value="ST">ST</option>
-		<option value="OBC">OBC</option>
-		<option value="VJ">VJ</option>
-		<option value="Open">OPEN</option>
-		<option value="NT-B">NT-B</option>
-		<option value="NT-C">NT-C</option>
-		<option value="NT-D">NT-D</option>
-	</select><br><br>
-
-<form class="w3-container">
-
-	<label>Enter Percentile</label>
-	<input class="number_input" type="float" id="Percentile" name="Percentile" >
-</form><br><br>
-	<input class="w3-radio" type="radio" name="gender" value="male" checked>
-      <label>Male</label>
-
-      <input class="w3-radio" type="radio" name="gender" value="female">
-      <label>Female</label>
-
-      <input class="w3-radio" type="radio" name="gender" value="" disabled>
-      <label>Other</label>
-
-</div>
-			<input type ="SUBMIT" value="SUBMIT" ></div>
-		</section>
-	</main>
-</form>
-
-</header>
-
+	<header>
+		<nav>
+			<div class="logo"></div>
+			<img src="static/CollegeVistaLogo.jpeg" alt="Logo" height="50px" width="250px">
+			<div class="menu">
+				<a href="#" style="font-size:">Home</a>
+				<a href="#">Colleges</a>
+				<a href="https://www.kitcoek.in/" target="_blank">About</a>
+				<a href="#">Contact</a>
+			</div>
+		</nav>
+		<form method="post" enctype="multipart/form-data" action="predict">
+			{% csrf_token %}
+			<main>
+				<section>
+					<h3>Welcome To CollegeVista</h3>
+					<h1>MHT-CET College Predictor</h1>
+					<div>
+						<label for="cast">Choose a Caste:</label>
+						<select name="cast" id="cast">
+							<option value="">--Please Select a Category--</option>
+							<option value="SC">SC</option>
+							<option value="ST">ST</option>
+							<option value="OBC">OBC</option>
+							<option value="VJ">VJ</option>
+							<option value="Open">OPEN</option>
+							<option value="NT-B">NT-B</option>
+							<option value="NT-C">NT-C</option>
+							<option value="NT-D">NT-D</option>
+						</select><br><br>
+						<form class="w3-container">
+							<label>Enter Percentile</label>
+							<input class="number_input" type="float" id="Percentile" name="Percentile">
+						</form><br><br>
+						<input class="w3-radio" type="radio" name="gender" value="male" checked>
+						<label>Male</label>
+						<input class="w3-radio" type="radio" name="gender" value="female">
+						<label>Female</label>
+						<input class="w3-radio" type="radio" name="gender" value="" disabled>
+						<label>Other</label>
+					</div>
+					<div class="btntwo">
+						<button type="submit" value="SUBMIT">SUBMIT</button>
+					</div>
+				</section>
+			</main>
+		</form>
+	</header>
 </body>
 </html>

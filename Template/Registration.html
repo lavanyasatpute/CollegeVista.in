@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="\static\Register CSS.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form method="POST" action='signin'>
+            {% csrf_token %}
+
+            
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required>
+
+            <button type="submit" name="Registration">Register</button>
+        </form>
+    </div>
+</body>
+</html>

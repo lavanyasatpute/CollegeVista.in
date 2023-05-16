@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,700">
+  <link rel="stylesheet" href="static/stylesSignup.css">
+</head>
+<body>
+  <div class="login-form">
+    <form method="POST" enctype="multipart/form-data" action="info">
+      {% csrf_token %}
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="email" placeholder="Email" autocomplete="nope" id="email" name="email">
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password" autocomplete="new-password" id="password" name="password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+      </div>
+      <div class="action">
+        <button type="submit" name="signin" value="signin">Sign in</button>
+      </div>
+    </form>
+    <form method="POST" action="Register">
+      {% csrf_token %}
+      <div class="action">
+        <button type="submit" name="Register" value="Register">Register</button>
+      </div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

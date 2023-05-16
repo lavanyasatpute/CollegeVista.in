@@ -1,21 +1,16 @@
 from django.shortcuts import render,HttpResponse,redirect
-from Shiva.models import Contact
+#from Shiva.models import Contact
 #import pandas as pd
 #import joblib
-from django.http import FileResponse
+#from django.http import FileResponse
 from .tests import lavanya
-#import pandas 
-# Create your views here.
-#classifer = joblib.load("TrainPKLmodel\trainModel.pkl")
-#ram=joblib.load("TrainPKLmodel\trainModel2.pkl")
 
 def index(request):
     return render(request,'home.html')
 
 
 def about(request):
-    return render(request,"index.html")
-
+    return render(request,"signup.html")
 
 
 def predict(request):
@@ -23,14 +18,13 @@ def predict(request):
         Percentile = request.POST.get('Percentile')
         cast = request.POST.get('cast')
         pavan = lavanya(Percentile,cast)
-        print('pavan:', pavan)
-        Context = {'pavan':pavan}
-        # Process the imported data
-        # You can perform any necessary operations on the imported data here
-        
-        return render(request, 'NewResult.html', Context)
+        Context = {'pavan':pavan} 
+        return render(request, 'result.html', Context)
 
     
 
-def logout(request):
-    return render(request,'logout.html')
+def Register(request):
+    return render(request,'Registration.html')
+
+def signin(request):
+    return render(request, 'signin.html')
