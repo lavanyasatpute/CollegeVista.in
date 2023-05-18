@@ -1,11 +1,38 @@
-﻿Sr.No.,CourseName,VJ
-1,Computer Science and engineering,86.5103056
-2,CSE(DS),85.60
-3,CSE(AIML),82.3797757
-5,Electronics and Telecommunication Engineering,72.5765063
-4,CSBS,70.7220669
-6,Electrical engineering,44.7418375
-9,Civil Engineering,21.2317049
-8,Mechanical Engineering,8.60
-7,Bio Technology,0
-10,Environmental Engineering,0.00
+﻿Sr.No.,Colleges,CourseName,VJ
+1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,86.5103056
+2,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),85.6
+3,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),82.3797757
+4,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(AIML),74.25
+5,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,72.5765063
+6,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,70.7220669
+7,"D.Y.Patil College of Engineering and Technology, Kolhapur",E&TC,69.048
+8,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Computer Science and engineering,68.56
+9,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electronics and Telecommunication Engineering,63.65
+10,"D.Y.Patil College of Engineering and Technology, Kolhapur",Computer Science & Engineering,55.021
+11,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(DS),52.016
+12,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,44.7418375
+13,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(DS),38.75
+14,"Sharad Institute of Technology College of engineering, Yadrav",A.I. & D.S,37.427
+15,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Fashion Engineering,37.42
+16,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(AIML),33.986
+17,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Technology,33.82
+18,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electrical engineering,29.09
+19,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,21.2317049
+20,"Sharad Institute of Technology College of engineering, Yadrav",Computer Science & Engineering,14.514
+21,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Man Made textile engineering,13.81
+22,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,8.6
+23,"Sharad Institute of Technology College of engineering, Yadrav",Electronics & Computer Engineering,5.226
+24,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,0
+25,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0
+26,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Chemistry,0
+27,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Mechanical Engineering,0
+28,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile plant engineering,0
+29,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Civil Engineering,0
+30,"Sharad Institute of Technology College of engineering, Yadrav",Civil Engineering,0
+31,"Sharad Institute of Technology College of engineering, Yadrav",Electrical Engineering,0
+32,"Sharad Institute of Technology College of engineering, Yadrav",Mechanical Engineering,0
+33,"Sharad Institute of Technology College of engineering, Yadrav",Mechatronics Engineering,0
+34,"Sharad Institute of Technology College of engineering, Yadrav",Automation & Robotics,0
+35,"D.Y.Patil College of Engineering and Technology, Kolhapur",Civil Engineering,0
+36,"D.Y.Patil College of Engineering and Technology, Kolhapur",Chemical Engineering,0
+37,"D.Y.Patil College of Engineering and Technology, Kolhapur",Mechanical Engineering,0

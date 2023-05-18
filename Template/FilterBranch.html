@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Display with Branch Filter</title>
+    <style>
+        .floating-window {
+            position: absolute;
+            background-color: #71cbcd;
+            border: 1px solid #090909;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: none;
+            border-radius: 8px; /* Add border-radius for curved corners */
+            padding: 10px;
+        }
+        .college-row:hover .floating-window {
+            display: block;
+        }
+        .floating-window-content {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function filterTable() {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("branchFilter");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("collegeTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Assuming branch is in the second column
+
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="branchFilter">Filter by Branch:</label>
+    <input type="text" id="branchFilter" onkeyup="filterTable()" placeholder="Enter branch name">
+    
+    <table id="collegeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Branch</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in pavan %}
+                <tr class="college-row">
+                    <td>{{ row.colleges }}</td>
+                    <td>{{ row.result }}</td>
+                   
+                    <td>
+                        <div class="floating-window">
+                            <div class="floating-window-content">
+                                Cutoff Percentile: {{ row.percentile }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="POST" action='logout'>
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

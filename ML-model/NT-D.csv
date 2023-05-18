@@ -1,11 +1,38 @@
-﻿Sr.No.,CourseName,NT-D
-1,Computer Science and engineering,93.1714502
-2,CSE(AIML),84.0382056
-3,CSE(DS),77.0895594
-4,Electronics and Telecommunication Engineering,70.9370842
-5,Mechanical Engineering,8.54
-6,CSBS,0.00
-7,Electrical engineering,0.00
-8,Bio Technology,0.00
-9,Civil Engineering,0.00
-10,Environmental Engineering,0.00
+﻿Sr.No.,Colleges,CourseName,NT-D
+1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,93.1714502
+2,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),84.0382056
+3,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),77.0895594
+4,"D.Y.Patil College of Engineering and Technology, Kolhapur",Computer Science & Engineering,76.486
+5,"Sharad Institute of Technology College of engineering, Yadrav",Computer Science & Engineering,72.469
+6,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,70.9370842
+7,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(DS),67.84
+8,"D.Y.Patil College of Engineering and Technology, Kolhapur",E&TC,67.774
+9,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electronics and Telecommunication Engineering,64.16
+10,"Sharad Institute of Technology College of engineering, Yadrav",A.I. & D.S,59.358
+11,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Computer Science and engineering,58.05
+12,"Sharad Institute of Technology College of engineering, Yadrav",Electronics & Computer Engineering,35.431
+13,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electrical engineering,30.42
+14,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(DS),27.417
+15,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(AIML),25.272
+16,"Sharad Institute of Technology College of engineering, Yadrav",Electrical Engineering,12.798
+17,"Sharad Institute of Technology College of engineering, Yadrav",Mechatronics Engineering,12.704
+18,"D.Y.Patil College of Engineering and Technology, Kolhapur",Chemical Engineering,9.309
+19,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,8.54
+20,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,0
+21,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,0
+22,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,0
+23,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,0
+24,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0
+25,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Civil Engineering,0
+26,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile plant engineering,0
+27,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Mechanical Engineering,0
+28,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Chemistry,0
+29,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Man Made textile engineering,0
+30,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Fashion Engineering,0
+31,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Technology,0
+32,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(AIML),0
+33,"Sharad Institute of Technology College of engineering, Yadrav",Civil Engineering,0
+34,"Sharad Institute of Technology College of engineering, Yadrav",Mechanical Engineering,0
+35,"Sharad Institute of Technology College of engineering, Yadrav",Automation & Robotics,0
+36,"D.Y.Patil College of Engineering and Technology, Kolhapur",Civil Engineering,0
+37,"D.Y.Patil College of Engineering and Technology, Kolhapur",Mechanical Engineering,0

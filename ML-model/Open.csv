@@ -1,11 +1,38 @@
-﻿Sr.No.,CourseName,Open
-1,Computer Science and engineering,93.74
-2,CSE(DS),91.26
-3,CSE(AIML),90.53
-4,CSBS,87.42
-5,Electronics and Telecommunication Engineering,84.87
-6,Electrical engineering,75.48
-7,Bio Technology,65.27
-8,Mechanical Engineering,58.81
-9,Civil Engineering,54.91
-10,Environmental Engineering,10.57
+﻿Sr.No.,Colleges,CourseName,OPEN
+1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,93.74
+2,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),91.26
+3,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),90.53
+4,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Computer Science and engineering,89.16
+5,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,87.42
+6,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(AIML),85.45
+7,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,84.87
+8,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(DS),84.68
+9,"D.Y.Patil College of Engineering and Technology, Kolhapur",Computer Science & Engineering,84.014
+10,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(AIML),79.54
+11,"Sharad Institute of Technology College of engineering, Yadrav",Computer Science & Engineering,77.35
+12,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,75.48
+13,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(DS),74.28
+14,"D.Y.Patil College of Engineering and Technology, Kolhapur",E&TC,69.668
+15,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electronics and Telecommunication Engineering,67.29
+16,"Sharad Institute of Technology College of engineering, Yadrav",A.I. & D.S,65.83
+17,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,65.27
+18,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Technology,63.56
+19,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,58.81
+20,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,54.91
+21,"D.Y.Patil College of Engineering and Technology, Kolhapur",Chemical Engineering,53.663
+22,"Sharad Institute of Technology College of engineering, Yadrav",Electronics & Computer Engineering,51.82
+23,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Fashion Engineering,51.21
+24,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electrical engineering,42.09
+25,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Mechanical Engineering,37.38
+26,"Sharad Institute of Technology College of engineering, Yadrav",Electrical Engineering,33.16
+27,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Man Made textile engineering,30.67
+28,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Chemistry,27.21
+29,"Sharad Institute of Technology College of engineering, Yadrav",Mechanical Engineering,27.21
+30,"Sharad Institute of Technology College of engineering, Yadrav",Automation & Robotics,23.85
+31,"Sharad Institute of Technology College of engineering, Yadrav",Mechatronics Engineering,23.69
+32,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile plant engineering,18.23
+33,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Civil Engineering,16.41
+34,"D.Y.Patil College of Engineering and Technology, Kolhapur",Mechanical Engineering,15.218
+35,"D.Y.Patil College of Engineering and Technology, Kolhapur",Civil Engineering,12.385
+36,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,10.57
+37,"Sharad Institute of Technology College of engineering, Yadrav",Civil Engineering,2.49

@@ -2,20 +2,29 @@
 <html>
 <head>
     <title>Registration Page</title>
-    <link rel="stylesheet" type="text/css" href="\static\Register CSS.css">
+    <link rel="stylesheet" type="text/css" href="/static/Register CSS.css">
 </head>
 <body>
     <div class="container">
         <h2>Registration</h2>
-        <form method="POST" action='signin'>
+        <form method="POST" action="signin">
             {% csrf_token %}
+            <label for="name">Full name:</label>
+            <input type="text" id="name" name="name" required>
 
-            
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
 
             <label for="password">Password:</label>
             <input type="text" id="password" name="password" required>
 
-            <button type="submit" name="Registration">Register</button>
+            <label for="conformpassword">Conform Password:</label>
+            <input type="text" id="conformpassword" name="conformpassword" required>
+
+            <button type="submit" name="Registration" value="Registration">Register</button>
         </form>
     </div>
 </body>
