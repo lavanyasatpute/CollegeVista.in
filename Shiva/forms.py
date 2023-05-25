@@ -1,8 +1,12 @@
 from django import forms
-from .models import Contact
+from django.contrib.auth.models import User
 
 
-class RegistrationForm(forms.ModelForm):
+
+class authenticate(forms.Form):
     class Meta:
-        model = Contact
-        fields = ['name','username', 'email', 'password','conformpassword']
+        model = User
+        fields = ['username', 'email', 'password']
+        
+
+

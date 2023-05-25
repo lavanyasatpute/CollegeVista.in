@@ -12,12 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name='User',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Caste', models.CharField(max_length=10)),
-                ('Percentile', models.IntegerField()),
-                ('Gender', models.CharField(max_length=10)),
+                ('name',models.CharField(max_length=100)),
+                ('username', models.CharField(max_length=100, primary_key=True)),
+                ('email', models.EmailField(max_length=100)),
+                ('password', models.CharField(max_length=100)),
             ],
+
         ),
     ]

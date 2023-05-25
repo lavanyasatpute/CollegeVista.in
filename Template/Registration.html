@@ -7,24 +7,24 @@
 <body>
     <div class="container">
         <h2>Registration</h2>
-        <form method="POST" action="signin">
+        <form method="POST" action="signup">
             {% csrf_token %}
-            <label for="name">Full name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">Full name: (First/Middle/Last)</label>
+            <input type="text" id="name" name="name" placeholder="name" required>
 
             <label for="username">User Name:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" placeholder="username" required>
 
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="email" required>
 
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password" required>
+            <label for="pass1">Password:</label>
+            <input type="password" id="pass1" name="pass1" placeholder="pass1" required>
 
-            <label for="conformpassword">Conform Password:</label>
-            <input type="text" id="conformpassword" name="conformpassword" required>
+            <label for="pass2">Confirm Password:</label>
+            <input type="password" id="pass2" name="pass2" placeholder="pass2" required>
 
-            <button type="submit" name="Registration" value="Registration">Register</button>
+            <button type="submit" name="signup" value="signup">Register</button>
         </form>
     </div>
 </body>

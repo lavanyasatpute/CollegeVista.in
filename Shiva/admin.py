@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Shiva.models import Contact
+from Shiva.models import User
 
 # Register your models here.
-admin.site.register(Contact)
+admin.site.register(User)

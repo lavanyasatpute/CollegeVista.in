@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-45=s$ven&vr(@%zy*+&ncjh-+u8@f#p^r4ry6rqu14zg_7gf5e
 DEBUG = True
 
 ALLOWED_HOSTS = [   
-    '192.168.43.32','26.59.109.181',
+    
 ]
 
 
@@ -76,11 +76,10 @@ WSGI_APPLICATION = 'collegevista.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'mydatabase.sqlite3',
     }
 }
 

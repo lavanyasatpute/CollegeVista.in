@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="login-form">
-    <form method="POST" enctype="multipart/form-data" action="info">
+    <form method="POST" enctype="multipart/form-data" action="login">
       {% csrf_token %}
       <h1>Login</h1>
       <div class="content">
@@ -21,7 +21,7 @@
         <a href="#" class="link">Forgot Your Password?</a>
       </div>
       <div class="action">
-        <button type="submit" name="signin" value="signin">Sign in</button>
+        <button type="submit" name="login" value="login">Sign in</button>
       </div>
     </form>
     <form method="POST" action="Register">

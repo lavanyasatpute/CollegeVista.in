@@ -65,7 +65,7 @@
       font-weight: 200;
       letter-spacing: 3px;
       text-shadow: 1px 1px 2px black;
-      top: 20px;
+      margin-top: 20%;
     }
     
     section h1 {
@@ -110,14 +110,16 @@
       align-content: center;
     }
     section .btntwo {
-      background: #060707;
+      background: #1b294a;
       color: rgb(253, 249, 249);
       padding: 16px 40px; /* Adjust the padding values as needed */
       font-size: 10px; /* Adjust the font size as needed */
+      margin-top: 5%;
+      
     }
     
     .btntwo:hover {
       background: #fff;
-      color: #000;
+      color: #212A3E;
     }
     
