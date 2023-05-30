@@ -1,0 +1,27 @@
+import joblib
+import os
+import pandas as pd 
+import numpy as np 
+from sklearn.tree import DecisionTreeClassifier
+
+workpath = os.path.dirname(os.path.abspath(__file__))
+
+cast_models = {
+    "OBC": "KIT/KIT_OBC.csv",
+    "VJ": "KIT/KIT_VJ.csv",
+    "Open": "KIT/KIT_Open.csv",
+    "ST": "KIT/KIT_ST.csv",
+    "SC": "KIT/KIT_SC.csv",
+    "EWS": "KIT/KIT_EWS.csv",
+    "NT-B": "KIT/KIT_NT-B.csv",
+    "NT-C": "KIT/KIT_NT-C.csv",
+    "NT-D": "KIT/KIT_NT-D.csv"
+}
+
+for cast, filename in cast_models.items():
+    data = pd.read_csv(os.path.join(workpath, filename))
+    model = DecisionTreeClassifier(random_state=42)
+    feature = np.array(data[cast]).reshape(-1, 1)
+    model.fit(feature, data["Sr.No."])
+    joblib.dump(model, f"KIT{cast}Model.pkl")
+    joblib.dump(data, f"KIT{cast}ModelData.pkl")

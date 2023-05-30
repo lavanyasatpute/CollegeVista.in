@@ -9,11 +9,15 @@ from Shiva.models import User
 import os
 from django.http import FileResponse
 from pathlib import Path
+import pymongo
+from pymongo.server_api import ServerApi
+#from urllib.parse import quote_plus
+
 
 #import pandas as pd
 #import joblib
 #from django.http import FileResponse
-from .tests import lavanya,generate_pdf
+from .tests import lavanya,generate_pdf,kit
 
 
 def index(request):
@@ -32,6 +36,23 @@ def predict(request):
         pavan = lavanya(Percentile,cast)
         Context = {'pavan':pavan} 
         return render(request, 'FilterBranch.html', Context)
+
+def kit(request):
+    return render(request,"kit.html")
+
+def kitbranch(request):
+    return render(request, 'KitHome.html')
+
+
+def branch(request):
+    if request.method == 'POST':
+       Percentile = request.POST.get('Percentile')
+       cast = request.POST.get('cast')
+       pavan1 = kit(Percentile,cast)
+       context = {'pavan1':pavan1}
+       return render(request, 'Resultkit.html', context)
+    
+    
     
 def pdf(request):
     if request.method == 'POST':
@@ -39,6 +60,7 @@ def pdf(request):
         #cast = request.POST.get('cast')
         #pavan = lavanya(Percentile,cast)
         L = generate_pdf(pavan)
+        #L = generate_pdf(pavan1)
         if os.path.exists(L):
             # Open the PDF file
             with open(L, 'rb') as file:
@@ -64,7 +86,7 @@ def signup(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         pass1 = request.POST.get('pass1')
-        pass2 = request.POST.get("pass2")
+        pass2 = request.POST.get("pass1")
 
         # Check if passwords match
         if pass1 != pass2:
@@ -72,14 +94,22 @@ def signup(request):
             return redirect("signup")
 
         # Create the user
-        myuser = User.objects.create_user(username=username, email=email, password=pass1)
-        myuser.first_name = name
-        myuser.save()
+        uri = "mongodb+srv://collegevista:%40Lavanya2003@collegevista.dhtkzwn.mongodb.net/?retryWrites=true&w=majority"
+        client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
+        db = client["CollegeVista"]
+        collection = db['myUser']
+        dict = {'name':name,'username':username,'email':email,'password':pass1}
+        collection.insert_one(dict)
+        #Messages = "Your account was successfully created."
 
-        messages.success(request, "Your account was successfully created.")
-        return redirect("")
+        return render(request, 'Signup.html')
+        
+        '''else:
+            Messages2 = messages.success(request,"Your account was not successfully create.")
 
-    return render(request, "signup.html")  # Render the signup form template
+            return render(request, 'Signup.html',Messages2)'''
+
+    return render(request, "Signup.html")  # Render the signup form template
 
     '''else:
             messages(request,"Your account is not Created , Please resister again .")
@@ -92,14 +122,26 @@ def signin(request):
 def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('info')  # Redirect to the home page after successful sign-in
+        password = request.POST.get('pass')
+        uri = "mongodb+srv://collegevista:%40Lavanya2003@collegevista.dhtkzwn.mongodb.net/?retryWrites=true&w=majority"
+        client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
+        db = client["CollegeVista"]
+        collection = db['myUser']
+        user = collection.find({'username':username})
+       
+        for item in user:
+            
+            if item['username']==username and item['password']==password:
+               return render(request,'home.html')
+            else:
+                return HttpResponse("Sorry you are not user")
+            
+        '''if user['password']==password:
+            return render(request, "home.html")
+
         else:
             error_message = "Invalid username or password."
-            return render(request, 'Signup.html', {'error_message': error_message})
+            return render(request, 'Signup.html', {'error_message': error_message})'''
     else:
         return render(request, 'Signup.html')
 

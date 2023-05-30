@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path
 from Shiva import views
 
@@ -11,6 +11,9 @@ urlpatterns = [
    path("login",views.login,name='login'),
    path("signup",views.signup,name='signup'),
    path("pdf",views.pdf,name='pdf'),
+   path("kit",views.kit,name="kit"),
+   path('kitbranch',views.kitbranch,name='kitbranch'),
+   path('branch',views.branch,name='branch'),
    
 ]
  

@@ -3,9 +3,12 @@ from reportlab.pdfgen import canvas
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.pagesizes import letter,A4
 from reportlab.lib import colors
+from reportlab.platypus.flowables import Spacer
 import tempfile
 from reportlab.platypus import Table, TableStyle, SimpleDocTemplate
 import joblib
+
+
 
 def lavanya(x, y):
     models = {
@@ -49,16 +52,59 @@ def lavanya(x, y):
     
     else:
         return 1
+    
+def kit(x, y):
+    models = {
+        "OBC": ("KITOBCModel.pkl", "KITOBCModelData.pkl"),
+        "Open": ("KITOpenModel.pkl", "KITOpenModelData.pkl"),
+        "VJ": ("KITVJModel.pkl", "KITVJModelData.pkl"),
+        "SC": ("KITSCModel.pkl", "KITSCModelData.pkl"),
+        "ST": ("KITSTModel.pkl", "KITSTModelData.pkl"),
+        "EWS": ("KITEWSModel.pkl", "KITEWSModelData.pkl"),
+        "NT-B": ("KITNT-BModel.pkl", "KITNT-BModelData.pkl"),
+        "NT-C": ("KITNT-CModel.pkl", "KITNT-CModelData.pkl"),
+        "NT-D": ("KITNT-DModel.pkl", "KITNT-DModelData.pkl")
+    }
+    
+    if y in models:
+        classifier = joblib.load(models[y][0])
+        ram = joblib.load(models[y][1])
+        
+        j = classifier.predict([[x]])
+        q = int(''.join(map(str, j - 1)))
+        
+        Branches = ram.iloc[q:, 2].tolist()
+        Percentile = ram.iloc[q:, 3].tolist()
+        Colleges = ram.iloc[q:, 1].tolist()
+        
+        my_list = []
+        i = len(ram) - q
+        
+        for j in range(i - 1):
+            my_dict = {}
+            my_dict['Colleges'] = Colleges[j]
+            my_dict['Branches'] = Branches[j]
+            my_dict['Percentile'] = Percentile[j]
+            my_list.append(my_dict)
+        
+        return my_list
+    
+    else:
+        return 1
 
 def generate_pdf(x):
-
     pdf_file = "College List.pdf"
-    c = canvas.Canvas(pdf_file, pagesize=letter)
+
+    # Set the margins
     left_margin = 72  # in points
     right_margin = 72
     top_margin = 72
-    bottom_margin = 18
-    c.translate(left_margin, bottom_margin)
+    bottom_margin = 10
+
+    # Calculate the available space for the table based on the margins and page size
+    page_width, page_height = letter
+    available_width = page_width - left_margin - right_margin
+    available_height = page_height - top_margin - bottom_margin
 
     table_data = []
     header_row = []
@@ -70,13 +116,14 @@ def generate_pdf(x):
         row = [str(value) for value in my_dict.values()]
         table_data.append(row)
 
-    table = Table(table_data)
+    # Define the table style
     table_style = TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), colors.gray),
         ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
         ('ALIGN', (0, 0), (-1, 1), 'CENTER'),
         ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
         ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('TOPPADDING', (0, 0), (-1, 0), 8),
         ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
         ('BACKGROUND', (0, 1), (-1, -1), colors.white),
         ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
@@ -85,20 +132,30 @@ def generate_pdf(x):
         ('ALIGN', (0, 1), (-1, -1), 'LEFT'),
     ])
 
-    # Apply the table style
-    table.setStyle(table_style)
+    # Set the font size and padding
+    font_size = 10
+    padding = 4
 
-    # Calculate the width of each column based on the page size and number of columns
-    page_width, page_height = A4
-    column_width = page_width / 3
-    table_width = column_width * len(table_data[0])
-    table.wrapOn(c, table_width, page_height)
+    # Create a list to hold the elements
+    elements = []
 
-    # Draw the table on the canvas, centered horizontally
-    x = (page_width - table_width) / 2
-    table.drawOn(c, x, 200)
+    # Add the header row to the table
+    table_data[0] = [cell.upper() for cell in table_data[0]]
+    elements.append(Table(table_data[0:1], style=table_style))
 
-    c.save()
+    # Add a spacer to create padding
+    elements.append(Spacer(1, 10))
 
+    # Add the remaining rows to the table
+    table_data[1:] = [[str(cell) for cell in row] for row in table_data[1:]]
+    elements.append(Table(table_data[1:], style=table_style))
+
+    # Create a SimpleDocTemplate and build the PDF
+    doc = SimpleDocTemplate(pdf_file, pagesize=letter, leftMargin=left_margin,
+                            rightMargin=right_margin, topMargin=top_margin, bottomMargin=bottom_margin)
+    doc.build(elements)
 
     return pdf_file
+
+
+
