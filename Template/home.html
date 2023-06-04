@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="static/styles.css">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
@@ -12,15 +14,75 @@
 			<div class="logo"></div>
 			<img src="static/CollegeVistaLogo.jpeg" alt="Logo" height="50px" width="250px">
 			<div class="menu">
-				<a href="#" style="font-size:">Home</a>
-				<a href="#">Colleges</a>
-				<a href="https://www.kitcoek.in/" target="_blank">About</a>
-				<a href="#">Contact</a>
+				<a href="#">Home</a>
+				<a href="kit.com">About</a>
+				<a href="kit" target="_blank">KITCoEK</a>
+				<a><center>
+					<label class="modal-btn" for="modal-toggle">Login/Signup</label>
+
+				</center></a>
 			</div>
 		</nav>
-		<form method="post" enctype="multipart/form-data" action="predict">
-			{% csrf_token %}
 			<main>
+				<section>
+					<div class="rt-container">
+						<div class="col-rt-12">
+						    <div class="Scriptcontent">
+						    
+					    <!-- Login Form Popup HTML -->
+					    
+					<input id="modal-toggle" type="checkbox">
+					<label class="modal-backdrop" for="modal-toggle"></label>
+					<div class="modal-content">
+					    <label class="modal-close-btn" for="modal-toggle">
+							  <svg width="30" height="30">
+						  <line x1="5" y1="5" x2="20" y2="20"/>
+							    <line x1="20" y1="5" x2="5" y2="20"/>
+							  </svg>
+						  </label>
+					    <div class="tabs">
+				  <!--  LOG IN  -->
+						  <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+						  <label for="tab-1" class="table"><span>Login</span></label>
+						  <div class="tabs-content">
+						     
+						     <form action="">
+							   <input type="email" placeholder="Email" required>
+							   <input type="password" placeholder="Password" required>
+							   <input type="submit" value="Log In">
+						     </form>
+						     <form class="forgot-password" action="">
+							   <input id="forgot-password-toggle" type="checkbox">
+							   <label for="forgot-password-toggle">forgot password?</label>
+							   <div class="forgot-password-content">
+								 <input type="email" placeholder="enter your email" required>
+								 <input type="submit" value="go">
+							   </div>
+						     </form>
+						  </div>
+				  <!--  SIGN UP  -->
+						  <input class="radio" id="tab-2" name="tabs-name" type="radio">
+						  <label for="tab-2" class="table"><span>Sign up</span></label>
+						  <div class="tabs-content">
+						     <form action="">
+							   <input type="email" placeholder="Email" required>
+							   <input type="password" placeholder="Password" required>
+							   <input type="password" placeholder="Confirm password" required>
+							   <input type="submit" value="Sign Up">
+						     </form>
+						  </div>
+					    </div>
+					</div>
+				  <!-- partial -->
+				  
+							
+						 
+							</div>
+						  </div>
+					</div>
+				  </section>
+		<form method="post" enctype="multipart/form-data" action="predict">
+				{% csrf_token %}
 				<section>
 					<h3>Welcome To CollegeVista</h3>
 					<h1>MHT-CET College Predictor</h1>
@@ -36,6 +98,7 @@
 							<option value="NT-B">NT-B</option>
 							<option value="NT-C">NT-C</option>
 							<option value="NT-D">NT-D</option>
+							<option value="EWS">EWS</option>
 						</select><br><br>
 						<form class="w3-container">
 							<label>Enter Percentile</label>
@@ -45,8 +108,6 @@
 						<label>Male</label>
 						<input class="w3-radio" type="radio" name="gender" value="female">
 						<label>Female</label>
-						<input class="w3-radio" type="radio" name="gender" value="" disabled>
-						<label>Other</label>
 					</div>
 					<div class="btntwo">
 						<button type="submit" value="SUBMIT">SUBMIT</button>

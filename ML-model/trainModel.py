@@ -13,9 +13,10 @@ cast_models = {
     "ST": "ST.csv",
     "SC": "SC .csv",
     "SBC": "SBC.csv",
-    "NT-B": "NT-B.csv",
+    "NT-B": "NT-B .csv",
     "NT-C": "NT-C.csv",
-    "NT-D": "NT-D.csv"
+    "NT-D": "NT-D.csv",
+    "EWS": "EWS.csv"
 }
 
 for cast, filename in cast_models.items():

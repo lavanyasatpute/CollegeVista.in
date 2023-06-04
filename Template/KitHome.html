@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		/* Styles for laptops and desktops */
+		@media (min-width: 992px) {
+		  /* CSS styles for laptops/desktops */
+		}
+	  
+		/* Styles for tablets */
+		@media (min-width: 768px) and (max-width: 991px) {
+		  /* CSS styles for tablets */
+		}
+	  
+		/* Styles for mobile devices */
+		@media (max-width: 767px) {
+		  /* CSS styles for mobile devices */
+		}
+	  </style>
+	  
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="static/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -36,17 +53,16 @@
 							<option value="NT-B">NT-B</option>
 							<option value="NT-C">NT-C</option>
 							<option value="NT-D">NT-D</option>
+							<option value="EWS">EWS</option>
 						</select><br><br>
 						<form class="w3-container">
 							<label>Enter Percentile</label>
 							<input class="number_input" type="float" id="Percentile" name="Percentile">
 						</form><br><br>
-						<input class="w3-radio" type="radio" name="gender" value="male" checked>
-						<label>Male</label>
-						<input class="w3-radio" type="radio" name="gender" value="female">
+						<input class="w3-radio" type="radio" id="gender" name="gender" value="male" checked>
+						<label>General</label>
+						<input class="w3-radio" type="radio" id="gender" name="gender" value="female">
 						<label>Female</label>
-						<input class="w3-radio" type="radio" name="gender" value="" disabled>
-						<label>Other</label>
 					</div>
 					<div class="btntwo">
 						<button type="submit" value="SUBMIT">SUBMIT</button>

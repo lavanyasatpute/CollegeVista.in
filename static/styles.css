@@ -109,17 +109,41 @@
       bottom: 320px;
       align-content: center;
     }
+    .btntwo{
+            background: white;
+            border: solid 2px black;
+            padding: .375em 1.125em;
+            font-size: 1rem;
+    }
     section .btntwo {
       background: #1b294a;
       color: rgb(253, 249, 249);
       padding: 16px 40px; /* Adjust the padding values as needed */
-      font-size: 10px; /* Adjust the font size as needed */
+      font-size: 1rem; /* Adjust the font size as needed */
       margin-top: 5%;
+      background: white;
+      border: solid 2px black;
       
     }
-    
     .btntwo:hover {
       background: #fff;
       color: #212A3E;
     }
+
+    /* Styles for laptops and desktops */
+    @media (min-width: 992px) {
+      /* CSS styles for laptops/desktops */
+    }
+
+    /* Styles for tablets */
+    @media (min-width: 768px) and (max-width: 991px) {
+      /* CSS styles for tablets */
+    }
+
+    /* Styles for mobile devices */
+    @media (max-width: 767px) {
+      /* CSS styles for mobile devices */
+    }
+
+
     

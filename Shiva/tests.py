@@ -20,7 +20,8 @@ def lavanya(x, y):
         "SBC": ("SBCModel.pkl", "SBCModelData.pkl"),
         "NT-B": ("NT-BModel.pkl", "NT-BModelData.pkl"),
         "NT-C": ("NT-CModel.pkl", "NT-CModelData.pkl"),
-        "NT-D": ("NT-DModel.pkl", "NT-DModelData.pkl")
+        "NT-D": ("NT-DModel.pkl", "NT-DModelData.pkl"),
+        "EWS": ("EWSModel.pkl", "EWSModelData.pkl"),
     }
     
     if y in models:
@@ -53,44 +54,6 @@ def lavanya(x, y):
     else:
         return 1
     
-def kit(x, y):
-    models = {
-        "OBC": ("KITOBCModel.pkl", "KITOBCModelData.pkl"),
-        "Open": ("KITOpenModel.pkl", "KITOpenModelData.pkl"),
-        "VJ": ("KITVJModel.pkl", "KITVJModelData.pkl"),
-        "SC": ("KITSCModel.pkl", "KITSCModelData.pkl"),
-        "ST": ("KITSTModel.pkl", "KITSTModelData.pkl"),
-        "EWS": ("KITEWSModel.pkl", "KITEWSModelData.pkl"),
-        "NT-B": ("KITNT-BModel.pkl", "KITNT-BModelData.pkl"),
-        "NT-C": ("KITNT-CModel.pkl", "KITNT-CModelData.pkl"),
-        "NT-D": ("KITNT-DModel.pkl", "KITNT-DModelData.pkl")
-    }
-    
-    if y in models:
-        classifier = joblib.load(models[y][0])
-        ram = joblib.load(models[y][1])
-        
-        j = classifier.predict([[x]])
-        q = int(''.join(map(str, j - 1)))
-        
-        Branches = ram.iloc[q:, 2].tolist()
-        Percentile = ram.iloc[q:, 3].tolist()
-        Colleges = ram.iloc[q:, 1].tolist()
-        
-        my_list = []
-        i = len(ram) - q
-        
-        for j in range(i - 1):
-            my_dict = {}
-            my_dict['Colleges'] = Colleges[j]
-            my_dict['Branches'] = Branches[j]
-            my_dict['Percentile'] = Percentile[j]
-            my_list.append(my_dict)
-        
-        return my_list
-    
-    else:
-        return 1
 
 def generate_pdf(x):
     pdf_file = "College List.pdf"
@@ -156,6 +119,4 @@ def generate_pdf(x):
     doc.build(elements)
 
     return pdf_file
-
-
 

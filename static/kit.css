@@ -1,3 +1,20 @@
+
+  /* Styles for laptops and desktops */
+  @media (min-width: 992px) {
+    /* CSS styles for laptops/desktops */
+  }
+
+  /* Styles for tablets */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* CSS styles for tablets */
+  }
+
+  /* Styles for mobile devices */
+  @media (max-width: 767px) {
+    /* CSS styles for mobile devices */
+  }
+
+
 body{
       font-family: "Poppins", sans-serif;
 }
