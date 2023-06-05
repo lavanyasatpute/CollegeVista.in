@@ -46,29 +46,23 @@
 						  <label for="tab-1" class="table"><span>Login</span></label>
 						  <div class="tabs-content">
 						     
-						     <form action="">
-							   <input type="email" placeholder="Email" required>
-							   <input type="password" placeholder="Password" required>
-							   <input type="submit" value="Log In">
-						     </form>
-						     <form class="forgot-password" action="">
-							   <input id="forgot-password-toggle" type="checkbox">
-							   <label for="forgot-password-toggle">forgot password?</label>
-							   <div class="forgot-password-content">
-								 <input type="email" placeholder="enter your email" required>
-								 <input type="submit" value="go">
-							   </div>
+						     <form method="POST" enctype="multipart/form-data" action="login">
+								{% csrf_token %}
+							   <input type="email" name="email" id="email" placeholder="Email" required>
+							   <input type="password" name="pass1" id="pass1" placeholder="Password" required>
+							   <input type="submit" name="login" value="login">
 						     </form>
 						  </div>
 				  <!--  SIGN UP  -->
 						  <input class="radio" id="tab-2" name="tabs-name" type="radio">
 						  <label for="tab-2" class="table"><span>Sign up</span></label>
 						  <div class="tabs-content">
-						     <form action="">
-							   <input type="email" placeholder="Email" required>
-							   <input type="password" placeholder="Password" required>
-							   <input type="password" placeholder="Confirm password" required>
-							   <input type="submit" value="Sign Up">
+						     <form method="POST" enctype="multipart/form-data" action="signup">
+								{% csrf_token %}
+							   <input type="email" name="email" id="email" placeholder="Email" required>
+							   <input type="password" name="pass1" id="pass1" placeholder="password" required>
+							   <input type="password" name="pass2" id="pass2" placeholder="Confirm password" required>
+							   <input type="submit" name="Register" value="Register">
 						     </form>
 						  </div>
 					    </div>

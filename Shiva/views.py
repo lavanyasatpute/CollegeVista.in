@@ -22,13 +22,16 @@ def predict(request):
         cast = request.POST.get('cast')
         if  not(Percentile and cast):
             return HttpResponse("Please Enter the Persentile and cast")
-       
+    
         t = threading.Thread(target=lavanya, args=(Percentile, cast))
         t.start()
         global pavan
         pavan = lavanya(Percentile, cast)
+        t.join()
         context = {'pavan': pavan}
         return render(request, 'FilterBranch.html', context)
+    #else:
+    #    return HttpResponse("Please create a account first !")
 
 def kit(request):
     return render(request, "kit.html")
@@ -49,10 +52,12 @@ def branch(request):
                 t = threading.Thread(target=kit1, args=(Percentile, cast))
                 t.start()
                 pavan = kit1(Percentile, cast)
+                t.join()
             else:
                 t = threading.Thread(target=ladkit, args=(Percentile, cast))
                 t.start()
                 pavan = ladkit(Percentile, cast)
+                t.join()
             context = {'pavan': pavan}
             return render(request, 'Resultkit.html', context)
     
@@ -69,6 +74,7 @@ def filterpdf(request):
         t = threading.Thread(target=generate_pdf, args=(filtered_pavan,))
         t.start()
         L = generate_pdf(filtered_pavan)
+        t.join()
         if os.path.exists(L):
             with open(L, 'rb') as file:
                 response = HttpResponse(file, content_type='application/pdf')
@@ -83,6 +89,7 @@ def pdf(request):
         t = threading.Thread(target=generate_pdf, args=(pavan,))
         t.start()
         L = generate_pdf(pavan)
+        t.join()
         if os.path.exists(L):
             with open(L, 'rb') as file:
                 response = HttpResponse(file, content_type='application/pdf')
@@ -96,48 +103,49 @@ def Register(request):
 
 def signup(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        name = request.POST.get('name')
+        #username = request.POST.get('username')
+        #name = request.POST.get('name')
         email = request.POST.get('email')
         pass1 = request.POST.get('pass1')
-        pass2 = request.POST.get("pass1")
+        pass2 = request.POST.get("pass2")
 
         if pass1 != pass2:
-            messages.error(request, "Passwords do not match")
-            return redirect("signup")
+            return HttpResponse("Passwords do not match")
 
         # Create the user
         uri = "mongodb+srv://collegevista:%40Lavanya2003@collegevista.dhtkzwn.mongodb.net/?retryWrites=true&w=majority"
         client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
         db = client["CollegeVista"]
         collection = db['myUser']
-        data = {'name': name, 'username': username, 'email': email, 'password': pass1}
+        data = {'id':1 ,'email': email, 'password': pass1}
         t = threading.Thread(target=collection.insert_one, args=(data,))
         t.start()
         collection.insert_one(data)
 
-        return render(request, 'Signup.html')
+        return render(request, 'home.html')
 
 def signin(request):
-    return render(request, "Signup.html")
+    return render(request, "home.html")
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('pass')
+        email = request.POST.get('email')
+        password = request.POST.get('pass1')
         uri = "mongodb+srv://collegevista:%40Lavanya2003@collegevista.dhtkzwn.mongodb.net/?retryWrites=true&w=majority"
         client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
         db = client["CollegeVista"]
         collection = db['myUser']
-        t = threading.Thread(target=collection.find, args=({'username': username},))
+        t = threading.Thread(target=collection.find, args=({'email': email},))
         t.start()
-        user = collection.find({'username': username})
-       
+        user = collection.find({'email': email})
         for item in user:
-            if item['username'] == username and item['password'] == password:
+            if item['email'] == email and item['password'] == password:
+                #global token
+                #token = collection.find({'id':id})
+                #token['id']=1
                 return render(request, 'home.html')
         
         return HttpResponse("Sorry, you are not a user")
 
-    return render(request, 'Signup.html')
+    return render(request, 'home.html')
 

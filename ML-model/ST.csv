@@ -1,38 +1,225 @@
-﻿Sr.No.,Colleges,CourseName,ST
-1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,90.79
-2,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),89.11
-3,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Computer Science and engineering,88.46
-4,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),88.02
-5,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(AIML),85.16
-6,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(DS),82.17
-7,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(AIML),81.64
-8,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(DS),74.288
-9,"Sharad Institute of Technology College of engineering, Yadrav",Computer Science & Engineering,72.282
-10,"D.Y.Patil College of Engineering and Technology, Kolhapur",E&TC,66.755
-11,"D.Y.Patil College of Engineering and Technology, Kolhapur",Computer Science & Engineering,66.24
-12,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,65.87
-13,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electronics and Telecommunication Engineering,63.56
-14,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,62.83
-15,"Sharad Institute of Technology College of engineering, Yadrav",A.I. & D.S,59.358
-16,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Technology,56.56
-17,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electrical engineering,40.76
-18,"Sharad Institute of Technology College of engineering, Yadrav",Electronics & Computer Engineering,40.254
-19,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,30.42
-20,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,12.64
-21,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Fashion Engineering,10.02
-22,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,0
-23,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,0
-24,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0
-25,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Chemistry,0
-26,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Mechanical Engineering,0
-27,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Man Made textile engineering,0
-28,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile plant engineering,0
-29,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Civil Engineering,0
-30,"Sharad Institute of Technology College of engineering, Yadrav",Civil Engineering,0
-31,"Sharad Institute of Technology College of engineering, Yadrav",Electrical Engineering,0
-32,"Sharad Institute of Technology College of engineering, Yadrav",Mechanical Engineering,0
-33,"Sharad Institute of Technology College of engineering, Yadrav",Mechatronics Engineering,0
-34,"Sharad Institute of Technology College of engineering, Yadrav",Automation & Robotics,0
-35,"D.Y.Patil College of Engineering and Technology, Kolhapur",Civil Engineering,0
-36,"D.Y.Patil College of Engineering and Technology, Kolhapur",Chemical Engineering,0
-37,"D.Y.Patil College of Engineering and Technology, Kolhapur",Mechanical Engineering,0
+﻿Sr.No.,Colleges,CourseName,ST,City
+1,"Institute Of Chemical Technology , Matuga , Mumbai",Polymer Engineering & Technology,97.268,"Matuga , Mumbai"
+2,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Computer Engineering,96.49,"Matuga , Mumbai"
+3,"Institute Of Chemical Technology , Matuga , Mumbai","Oil, Oleochemicals&SurfactantsvTechnology",96.449,"Matuga , Mumbai"
+4,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Production Engineering(Sandwich),95.395,"Matuga , Mumbai"
+5,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",A.I & D.S,94.415,Pune
+6,"Institute Of Chemical Technology , Matuga , Mumbai",Dyestuff Technology,94.061,"Matuga , Mumbai"
+7,"LakshmiNarayan Institute of Technology ,Nagpur",Chemical Engineering,93.497,Nagpur
+8,"College Of Engineering, Pune",Computer Engineering,93.076,Pune
+9,"College Of Engineering, Pune",Electronics and Telecommunication Engineering,92.338,Pune
+10,AISSMS College of Engineering,Computer Engg,91.446,Pune
+11,"Modern Education Society's College of Engineering, Pune",Computer Engg,91.446,Pune
+12,"College Of Engineering, Pune",Electrical Engineering,91.438,Pune
+13,"Marathwada Mitra Mandal's College of Engineering,Karvenagar,Pune",Information Technology,91.248,Pune
+14,"Institute Of Chemical Technology , Matuga , Mumbai",Fibres & Textile Processing Technology,91.168,"Matuga , Mumbai"
+15,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Electronics Engineering,90.988,"Matuga , Mumbai"
+16,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,90.79,Kolhapur
+17,AISSMS College of Engineering,A.I & D.S,90.696,Pune
+18,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Textile Technology,90.539,"Matuga , Mumbai"
+19,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Information Technology,90.48,"Matuga , Mumbai"
+20,"Rajarambapu Institute of Technology , Islampur",C.S. And I.T.,90.088,Islampur
+21,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",E & TC,90.014,Pune
+22,"Walchand College of Engineering, Sangli",Computer Science and Engineering,89.853,Sangli
+23,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),89.11,Kolhapur
+24,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Computer Science and engineering,88.46,Ichalkaranji
+25,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),88.02,Kolhapur
+26,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Civil Engineering,87.928,"Matuga , Mumbai"
+27,"Bhartiya Vidhya Bhavan's Sardar Patel Institute Of Technology , Andheri, Mumbai",Computer Engineering,87.224,"Andheri, Mumbai"
+28,AISSMS College of Engineering,E & TC,87.223,Pune
+29,"College Of Engineering, Pune",Civil Engineering,87.07,Pune
+30,"Pune Institute of Computer Technology, Dhankavdi, Pune",Computer Engineering,86.366,"Dhankavdi, Pune"
+31,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Computer Science & Design,85.671,"Wanadongri, Nagpur"
+32,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(AIML),85.16,Ichalkaranji
+33,"College Of Engineering, Pune",Instrumentation & Control  Engineering,84.686,Pune
+34,"Bhartiya Vidhya Bhavan's Sardar Patel Institute Of Technology , Andheri, Mumbai",CSE(AI & ML),84.567,"Andheri, Mumbai"
+35,"Rajarambapu Institute of Technology , Islampur",Electronics and Telecommunication Engineering,83.98,Islampur
+36,"Annasaheb Dange College of Engineering & Technology , Ashta",Computer Science and engineering,83.448,Ashta
+37,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Computer Engineering,83.146,Navi Mumbai
+38,"Pune Institute of Computer Technology, Dhankavdi, Pune",Information Technology,82.387,"Dhankavdi, Pune"
+39,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",CSE(DS),82.17,Ichalkaranji
+40,"Rajarambapu Institute of Technology , Islampur",Computer Science & Engineering,82.09,Islampur
+41,"Sinhagad College of Engineering,Vadgaon,Pune",Electrical Engg,81.896,Pune
+42,"Sinhagad College of Engineering,Vadgaon,Pune",E & TC,81.896,Pune
+43,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(AIML),81.64,Kolhapur
+44,"Institute Of Chemical Technology , Matuga , Mumbai",Chemical Engineering,81.616,"Matuga , Mumbai"
+45,"College Of Engineering, Pune",Mechanical Engineering,80.222,Pune
+46,"Modern Education Society's College of Engineering, Pune",E & TC,79.077,Pune
+47,"Walchand College of Engineering, Sangli",Information Technology,78.289,Sangli
+48,"Institute Of Chemical Technology , Matuga , Mumbai",Food Enginnering & Technology,78.289,"Matuga , Mumbai"
+49,"Tatyasaheb Kore Institute of Engineering & Technology (An Autonomous Institute), Kolhapur",Computer Science & Engineering,77.727,Kolhapur
+50,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Computer Science & Engineering,77.314,"Wanadongri, Nagpur"
+51,"Government College of Engineering, Aurangabad",Computer Science & Engineering,77.1459,Aurangabad
+52,"Government College Of Engineering, Amravati ",Computer Science & Engineering,77.1458,Amravati
+53,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Information Technology,77.089,Navi Mumbai
+54,"Rajarambapu Institute of Technology , Islampur",Electrical Engineering,76.6846,Islampur
+55,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",AI & DS,76.684,Pune
+56,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Electronics & Telecommunication Engineering,76.155,"Matuga , Mumbai"
+57,"Institute Of Chemical Technology , Matuga , Mumbai",Pharmactical Chemistry & Technology,76.103,"Matuga , Mumbai"
+58,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Mechanical Engineering,75.718,"Matuga , Mumbai"
+59,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",Computer Engineering,75.66,Pune
+60,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",Civil Engineering,74.733,Pune
+61,"Government College Of Engineering, Amravati ",Information Technology,74.5211,Amravati
+62,"D.Y.Patil College of Engineering and Technology, Kolhapur",CSE(DS),74.288,Kolhapur
+63,"Sardar Patel College of Engineering, Andheri",Civil Engineering,73.963,"Andheri, Mumbai"
+64,"Sinhagad College of Engineering,Vadgaon,Pune",Information Technology,73.646,Pune
+65,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",Computer Engg,72.967,Pune
+66,"Veermata Jijabai Technology Institute, Matunga, Mumbai",Electrical Engineering,72.659,"Matuga , Mumbai"
+67,"Sharad Institute of Technology College of engineering, Yadrav",Computer Science & Engineering,72.282,Yadrav
+68,"College Of Engineering, Pune",Manufacturing & Science Engi8neering,72.123,Pune
+69,"Bhartiya Vidhya Bhavan's Sardar Patel Institute Of Technology , Andheri, Mumbai",CSE(DS),71.062,"Andheri, Mumbai"
+70,"MIT Academy of Engineering,Alandi, Pune",Computer Engineering,70.9263,"Alandi, Pune"
+71,"Department of Technology , Kolhapur",Computer Science & Technology,70.897,Kolhapur
+72,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",Information Technology,70.788,Pune
+73,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Chemical Engineering,70.213,Navi Mumbai
+74,"Government College Of Engineering, Yavatmal",Electronics & Telecommunication Engineering,69.3948,Yavatmal
+75,"Walchand College of Engineering, Sangli",Civil Engineering,68.324,Sangli
+76,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",CSE(AI&ML),68.324,Pune
+77,"Sardar Patel College of Engineering, Andheri",Mechanical Engineering,68.102,"Andheri, Mumbai"
+78,"Government College of Engineering, Aurangabad",Information Technology,67.7143,Aurangabad
+79,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",Mechanical Engineering,67.291,Pune
+80,"D.Y.Patil College of Engineering and Technology, Kolhapur",E&TC,66.755,Kolhapur
+81,"Sardar Patel College of Engineering, Andheri",Electrical Engineering,66.241,"Andheri, Mumbai"
+82,"D.Y.Patil College of Engineering and Technology, Kolhapur",Computer Science & Engineering,66.24,Kolhapur
+83,"Annasaheb Dange College of Engineering & Technology , Ashta",A.I. and D.S.,66.077,Ashta
+84,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,65.87,Kolhapur
+85,AISSMS College of Engineering,Electrical Engineering,65.808,Pune
+86,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Computer Science and engg,65.265,Nanded
+87,"Annasaheb Dange College of Engineering & Technology , Ashta",CSE(IoT and C.S),64.167,Ashta
+88,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",Information Technology,63.562,Pune
+89,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electronics and Telecommunication Engineering,63.56,Ichalkaranji
+90,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,62.83,Kolhapur
+91,"Government College Of Engineering, Amravati ",Electronics & Telecommunication Engineering,61.8814,Amravati
+92,"Bhartiya Vidhya Bhavan's Sardar Patel Institute Of Technology , Andheri, Mumbai",Electronics and telecommunication Engineering,61.528,"Andheri, Mumbai"
+93,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Information Technology,61.528,"Wanadongri, Nagpur"
+94,"Rajarambapu Institute of Technology , Islampur",Civil Engineering,61.52,Islampur
+95,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",Mechanical Engineering,60.858,Pune
+96,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Electronics & Telecommunication Engineering,59.736,Pune
+97,"Government College of Engineering, Aurangabad",Electronics & Telecommunication Engineering,59.7018,Aurangabad
+98,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Information Technology,59.4192,Nanded
+99,"Sharad Institute of Technology College of engineering, Yadrav",A.I. & D.S,59.358,Yadrav
+100,"Government College Of Engineering, Amravati ",Electrical Engineerinng,56.8099,Amravati
+101,"Government College of Engineering, Aurangabad",Mechanical Engineering,56.5826,Aurangabad
+102,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Technology,56.56,Ichalkaranji
+103,"Walchand College of Engineering, Sangli",Electronics Engineering,55.311,Sangli
+104,"Tatyasaheb Kore Institute of Engineering & Technology (An Autonomous Institute), Kolhapur",Chemical Engineering,55.31,Kolhapur
+105,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",Information Technology,55.021,Pune
+106,"Government College Of Engineering, Yavatmal",Electrical Engineering ,54.5241,Yavatmal
+107,"Dr.J.J.Magdum Charitable Trust's Dr.J.J.Magdum College of engineering, Jaysingpur",Computer Science and engineering,53.25,Jaysingpur
+108,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",Computer Engg,52.211,Pune
+109,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",CSE(AIML),52.016,"Wanadongri, Nagpur"
+110,"JSPM'S Jaywantrao Sawant College of Engineering,Pune",Electrical Engineering,51.931,Pune
+111,"Walchand College of Engineering, Sangli",Electrical Engineering,50.61,Sangli
+112,"Government College Of Engineering, Amravati ",Civil Engineering,50.561,Amravati
+113,"Marathwada Mitra Mandal's College of Engineering,Karvenagar,Pune",Computer Engg,49.584,Pune
+114,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Information Technology,47.433,Pune
+115,"Government College Of Engineering, Yavatmal",Mechanical Engineering,46.9441,Yavatmal
+116,"Pune Institute of Computer Technology, Dhankavdi, Pune",Electronics & Telecommunication Engineering,46.941,"Dhankavdi, Pune"
+117,"Walchand College of Engineering, Sangli",Mechanical Engineering,46.0655,Sangli
+118,"Dr.J.J.Magdum Charitable Trust's Dr.J.J.Magdum College of engineering, Jaysingpur",Information Technology,44.76,Jaysingpur
+119,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",Civil Engg,44.194,Pune
+120,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Electronics and Telecommunication Engineering,43.3051,Navi Mumbai
+121,"Government College Of Engineering, Yavatmal",Computer Engineering,41.1873,Yavatmal
+122,"Department of Technology , Kolhapur",Electronics and Telecommunication Engineering,41.136,Kolhapur
+123,"College Of Engineering, Pune",Metallurgy & Material Technology,41.074,Pune
+124,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Electrical engineering,40.76,Ichalkaranji
+125,"Sharad Institute of Technology College of engineering, Yadrav",Electronics & Computer Engineering,40.254,Yadrav
+126,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Mechanical Engineering,38.752,"Wanadongri, Nagpur"
+127,"Government College Of Engineering, Yavatmal",Civil Engineering,38.1736,Yavatmal
+128,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Computer Technology,37.381,"Wanadongri, Nagpur"
+129,"Government College of Engineering, Aurangabad",Civil Engineering,36.7166,Aurangabad
+130,"Government College of Engineering, Aurangabad",Electrical Engineering,35.3993,Aurangabad
+131,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Electronics Engineering,34.271,"Wanadongri, Nagpur"
+132,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",AI & DS,34.239,"Wanadongri, Nagpur"
+133,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Electronics & Telecommunication Engineering,33.986,"Wanadongri, Nagpur"
+134,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Robotics & Automation,33.791,Pune
+135,"JSPM'S Jaywantrao Sawant College of Engineering,Pune",Computer Engineering,32.3435,Pune
+136,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,30.42,Kolhapur
+137,"Institute Of Chemical Technology , Matuga , Mumbai",Surface Coating Technology,30.331,"Matuga , Mumbai"
+138,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Industrial IoT,30.331,"Wanadongri, Nagpur"
+139,"Marathwada Mitra Mandal's College of Engineering,Karvenagar,Pune",Electrical Engg,30.301,Pune
+140,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Mechanical Engineerng,24.876,Nanded
+141,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Civil Engineering,24.348,"Wanadongri, Nagpur"
+142,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",Electrical Engineering,23.641,Pune
+143,"Government College Of Engineering, Amravati ",Mechanical Engineering ,19.4669,Amravati
+144,"Rajarambapu Institute of Technology , Islampur",Mechanical Engineering,17.225,Islampur
+145,"Government College Of Engineering, Amravati ",Instrumentation Engineering,16.5737,Amravati
+146,"Annasaheb Dange College of Engineering & Technology , Ashta",Aeronautical Engineering,15.171,Ashta
+147,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,12.64,Kolhapur
+148,"Mahatma Gandhi Missions College of Engineering, Hingoli Rd, Nanded",Computer Science and Engineering,12.099,Nanded
+149,"Dr.J.J.Magdum Charitable Trust's Dr.J.J.Magdum College of engineering, Jaysingpur",Electronics and Telecommunication Engineering,10.51,Jaysingpur
+150,"MIT Academy of Engineering,Alandi, Pune",Civil Engineering,10.1983,"Alandi, Pune"
+151,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Fashion Engineering,10.02,Ichalkaranji
+152,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Computer Engineering,9.309,Pune
+153,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",Electronics and Telecommunication Engineering,8.541,Pune
+154,"Yashwantrao Chavan College of Engineering, Wanadongri, Nagpur",Electrical Engineering(Electronics & Power),8.344,"Wanadongri, Nagpur"
+155,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",Mechanical Engineering,7.394,Pune
+156,"B.R.AC.T'S Vishwakarma Institute of Technology,Kondhawa,Pune",E & TC,6.642,Pune
+157,"Mahatma Gandhi Missions College of Engineering, Hingoli Rd, Nanded",Information Technology,5.808,Nanded
+158,"MIT Academy of Engineering,Alandi, Pune",Electronics and Telecommunication Engineering,5.269,"Alandi, Pune"
+159,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",E & TC,4.578,Nanded
+160,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Electrical Engineering,1.581,Pune
+161,"D.Y.Patil College of Engineering and Technology, Kolhapur",Civil Engineering,0,Kolhapur
+162,"D.Y.Patil College of Engineering and Technology, Kolhapur",Chemical Engineering,0,Kolhapur
+163,"D.Y.Patil College of Engineering and Technology, Kolhapur",Mechanical Engineering,0,Kolhapur
+164,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile Chemistry,0,Ichalkaranji
+165,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Mechanical Engineering,0,Ichalkaranji
+166,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Man Made textile engineering,0,Ichalkaranji
+167,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Textile plant engineering,0,Ichalkaranji
+168,"Dattajirao Kadam Technical Education Socity's Textile and Engineering Institute, Ichalkaranji",Civil Engineering,0,Ichalkaranji
+169,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,0,Kolhapur
+170,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,0,Kolhapur
+171,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0,Kolhapur
+172,"Sharad Institute of Technology College of engineering, Yadrav",Civil Engineering,0,Yadrav
+173,"Sharad Institute of Technology College of engineering, Yadrav",Electrical Engineering,0,Yadrav
+174,"Sharad Institute of Technology College of engineering, Yadrav",Mechanical Engineering,0,Yadrav
+175,"Sharad Institute of Technology College of engineering, Yadrav",Mechatronics Engineering,0,Yadrav
+176,"Sharad Institute of Technology College of engineering, Yadrav",Automation & Robotics,0,Yadrav
+177,"Annasaheb Dange College of Engineering & Technology , Ashta",Civil Engineering,0,Ashta
+178,"Annasaheb Dange College of Engineering & Technology , Ashta",Electrical engineering,0,Ashta
+179,"Annasaheb Dange College of Engineering & Technology , Ashta",Food Technology,0,Ashta
+180,"Annasaheb Dange College of Engineering & Technology , Ashta",Mechanical Engineering,0,Ashta
+181,"Department of Technology , Kolhapur",Civil Engineering,0,Kolhapur
+182,"Department of Technology , Kolhapur",Food Technology,0,Kolhapur
+183,"Department of Technology , Kolhapur",Chemical Engineering,0,Kolhapur
+184,"Department of Technology , Kolhapur",Mechanical Engineering,0,Kolhapur
+185,"Dr.J.J.Magdum Charitable Trust's Dr.J.J.Magdum College of engineering, Jaysingpur",Civil Engineering,0,Jaysingpur
+186,"Dr.J.J.Magdum Charitable Trust's Dr.J.J.Magdum College of engineering, Jaysingpur",Mechanical Engineering,0,Jaysingpur
+187,"Rajarambapu Institute of Technology , Islampur",Automative Technology,0,Islampur
+188,"Rajarambapu Institute of Technology , Islampur",Mechatronics Engineering,0,Islampur
+189,"Tatyasaheb Kore Institute of Engineering & Technology (An Autonomous Institute), Kolhapur",Civil Engineering,0,Kolhapur
+190,"Tatyasaheb Kore Institute of Engineering & Technology (An Autonomous Institute), Kolhapur",Electronics & Computer Engineering,0,Kolhapur
+191,"Tatyasaheb Kore Institute of Engineering & Technology (An Autonomous Institute), Kolhapur",Mechanical Engineering,0,Kolhapur
+192,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Instrumentation Engineering,0,Navi Mumbai
+193,"Bharati Vidyapeeth College of Engineering, Navi Mumbai",Mechanical Engineering,0,Navi Mumbai
+194,"LakshmiNarayan Institute of Technology ,Nagpur",Food Technology ,0,Nagpur
+195,"LakshmiNarayan Institute of Technology ,Nagpur",Plastic & Polymer technology,0,Nagpur
+196,"LakshmiNarayan Institute of Technology ,Nagpur",Paper & Pulp Technology,0,Nagpur
+197,"LakshmiNarayan Institute of Technology ,Nagpur",Petrochemical Engineering,0,Nagpur
+198,"LakshmiNarayan Institute of Technology ,Nagpur",Oil Technology,0,Nagpur
+199,"LakshmiNarayan Institute of Technology ,Nagpur",Surface Coating,0,Nagpur
+200,"Mahatma Gandhi Missions College of Engineering, Hingoli Rd, Nanded",Civil Engineering,0,Nanded
+201,"Mahatma Gandhi Missions College of Engineering, Hingoli Rd, Nanded",Electronics and Telecommunication Engineering,0,Nanded
+202,"Mahatma Gandhi Missions College of Engineering, Hingoli Rd, Nanded",Mechanical Engineering,0,Nanded
+203,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Civil Engg,0,Nanded
+204,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Electrical Engineering,0,Nanded
+205,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Instrumentation Engineering,0,Nanded
+206,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Chemical Engineering,0,Nanded
+207,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Production Engineering,0,Nanded
+208,"Shri Guru Gobind Singhji Institute of Engineering and Technology,Nanded",Textile Technology,0,Nanded
+209,AISSMS College of Engineering,Instrumention Engg,0,Pune
+210,"JSPM'S Jaywantrao Sawant College of Engineering,Pune",Information Technology,0,Pune
+211,"JSPM'S Jaywantrao Sawant College of Engineering,Pune",Electronics and Telecommunication Engineering,0,Pune
+212,"JSPM'S Jaywantrao Sawant College of Engineering,Pune",Mechanical Engineering,0,Pune
+213,"Marathwada Mitra Mandal's College of Engineering,Karvenagar,Pune",E & TC,0,Pune
+214,"Marathwada Mitra Mandal's College of Engineering,Karvenagar,Pune",Mechanical Engg,0,Pune
+215,"MIT Academy of Engineering,Alandi, Pune",Electronics Engineering,0,"Alandi, Pune"
+216,"MIT Academy of Engineering,Alandi, Pune",Chemical Engineering,0,"Alandi, Pune"
+217,"MIT Academy of Engineering,Alandi, Pune",Mechanical Engineering,0,"Alandi, Pune"
+218,"Modern Education Society's College of Engineering, Pune",Mechanical Engineering,0,Pune
+219,"Pune Vidyarthi Griha's College of Engineering & Technology,Pune",Printing Technology,0,Pune
+220,"Sinhagad College of Engineering,Vadgaon,Pune",Chemical Engg,0,Pune
+221,"Sinhagad College of Engineering,Vadgaon,Pune",Production Engg,0,Pune
+222,"Sinhagad College of Engineering,Vadgaon,Pune",Mechanical Engg,0,Pune
+223,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Civil Engineering,0,Pune
+224,"Zeal Eduction Socity's Zeal College of Engineering & Research, Nerhe, Pune",Chemical Engineering,0,Pune
