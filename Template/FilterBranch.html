@@ -3,7 +3,25 @@
 <head>
     <title>Table Display with Branch Filter</title>
     <style>
+        select{
+            width: 15%;
+            margin: 8px 0;
+            font-size: 1.35rem;
+            padding: 2px 5px;
+            box-sizing: border-box;
+            border: 2px solid #180033;
+            font-family: "Open Sans", sans-serif;
+        }
          .pholder{
+            position: absolute;
+            top: 8px;
+            right: 780px;
+            background: white;
+            border: solid 2px black;
+            padding: .375em 1.125em;
+            font-size: 1rem;
+        }
+        .pholder1{
             position: absolute;
             top: 8px;
             right: 780px;
@@ -58,6 +76,21 @@
         {% csrf_token %}
         <label>Filter by Branch:</label>
         <input class="pholder"type="text" id="branchFilter" name="branchFilter" placeholder="Enter branch name">
+       <!-- <label for="cast">Choose a City:</label>
+            <select id="Cityfilter" name="Cityfilter">
+            <option value="">Please Select a City</option>
+            <option value="kop">Kolhapur</option>
+            <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="nagpur">Nagpur</option>
+            <option value="nanded">Nanded</option>
+            <option value="jaysingpur">Jaysingpur</option>
+            <option value="islampur">Islampur</option>
+            <option value="aurangabad">Aurangabad</option>
+            <option value="sangli">Sangli</option>
+            <option value="amrvati">Amravati</option>
+            <option value="Yavatmal">Yavatmal</option>
+        </select><br><br> -->
         <button type="submit">Filter</button>
     </form>
     <table class="center"  id="collegeTable">

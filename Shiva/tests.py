@@ -31,13 +31,11 @@ def lavanya(x, y):
         j = classifier.predict([[x]])
         q = int(''.join(map(str, j - 1)))
         
-        Branches = ram.iloc[q:, 2]
-        Percentile = ram.iloc[q:, 3]
-        Colleges = ram.iloc[q:, 1]
+        Branches = ram.iloc[q:, 2].tolist()
+        Percentile = ram.iloc[q:, 3].tolist()
+        Colleges = ram.iloc[q:, 1].tolist()
+        City = ram.iloc[q:,4].tolist()
         
-        Colleges = list(Colleges)
-        Branches = list(Branches)
-        Percentile = list(Percentile)
 
         my_list = []
         i = len(ram) - q
@@ -47,6 +45,7 @@ def lavanya(x, y):
             my_dict['Colleges'] = Colleges[j]
             my_dict['Branches'] = Branches[j]
             my_dict['Percentile'] = Percentile[j]
+            my_dict['City'] = City[j]
             my_list.append(my_dict)
         
         return my_list

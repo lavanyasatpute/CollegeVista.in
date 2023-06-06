@@ -66,7 +66,7 @@ def ladkit(x,y):
         my_list = []
         i = len(ram) - q
         
-        for j in range(i - 1):
+        for j in range(i):
             my_dict = {}
             my_dict['Colleges'] = Colleges[j]
             my_dict['Branches'] = Branches[j]

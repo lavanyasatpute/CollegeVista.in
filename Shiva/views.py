@@ -65,9 +65,13 @@ def filter(request):
     global filtered_pavan
     if request.method == 'POST':
         branchFilter = request.POST.get('branchFilter')
-        filtered_pavan = [pavan1 for pavan1 in pavan if pavan1['Branches'] == branchFilter]
-        context = {'filtered_pavan': filtered_pavan}
-        return render(request, 'NewResult.html', context)
+        Cityfilter = request.POST.get('Cityfilter')
+        if not(branchFilter):
+            return HttpResponse("Please enter the Branch")
+        else:
+            filtered_pavan = [pavan1 for pavan1 in pavan if pavan1['Branches'] == branchFilter]
+            context = {'filtered_pavan': filtered_pavan}
+            return render(request, 'NewResult.html', context)
     
 def filterpdf(request):
     if request.method == 'POST':

@@ -29,7 +29,7 @@ for cast, filename in cast_models.items():
 
 cast_models1 = {
     "OBC": "KIT\Lad_KIT_Cutoff_OBC.csv",
-    "VJDT": "KIT/Lad_KIT_Cutoff_VJ.csv",
+    "VJ": "KIT/Lad_KIT_Cutoff_VJ.csv",
     "OPEN": "KIT/Lad_KIT_Cutoff_Open.csv",
     "ST": "KIT/Lad_KIT_Cutoff_ST.csv",
     "SC": "KIT/Lad_KIT_Cutoff_SC.csv",

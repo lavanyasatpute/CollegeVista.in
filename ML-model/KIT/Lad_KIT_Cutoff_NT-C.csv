@@ -1,11 +1,11 @@
-﻿Sr.No.,College Name,CourseName,NT-C
-1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,89.48
-2,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),82.44
-3,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),0
-4,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,74.51
-5,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,83.45
-6,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,0.00
-7,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,0.00
-8,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,0
-9,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0
-10,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,17.84
+﻿Sr.No.,Sr.No.,College Name,CourseName,NT-C
+1,1,"KIT college of enginieering(Autonomus), Kolhapur",Computer Science and engineering,89.48
+5,2,"KIT college of enginieering(Autonomus), Kolhapur",Electronics and Telecommunication Engineering,83.45
+2,3,"KIT college of enginieering(Autonomus), Kolhapur",CSE(DS),82.44
+4,4,"KIT college of enginieering(Autonomus), Kolhapur",CSBS,74.51
+10,5,"KIT college of enginieering(Autonomus), Kolhapur",Mechanical Engineering,17.84
+3,6,"KIT college of enginieering(Autonomus), Kolhapur",CSE(AIML),0
+6,7,"KIT college of enginieering(Autonomus), Kolhapur",Electrical engineering,0.00
+7,8,"KIT college of enginieering(Autonomus), Kolhapur",Bio Technology,0.00
+8,9,"KIT college of enginieering(Autonomus), Kolhapur",Civil Engineering,0
+9,10,"KIT college of enginieering(Autonomus), Kolhapur",Environmental Engineering,0
