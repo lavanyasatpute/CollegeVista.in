@@ -3,6 +3,7 @@ from django.urls import path
 from Shiva import views
 
 urlpatterns = [
+    path("",views.empty,name='empty'),
    path("info",views.index,name='info'), 
    path("predict",views.predict,name='Predict'),
    path("logout",views.logout,name='Satpute'),

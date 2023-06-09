@@ -10,6 +10,9 @@ from .tests import lavanya, generate_pdf
 from .kitprediction import kit1,ladkit
 import threading
 
+def empty(request):
+    return HttpResponse("Please Enter the Valid Url......")
+
 def index(request):
     return render(request, 'home.html')
 
