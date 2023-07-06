@@ -6,43 +6,85 @@ from sklearn.tree import DecisionTreeClassifier
 
 workpath = os.path.dirname(os.path.abspath(__file__))
 
-cast_models = {
-    "OBC": "KIT/KIT_OBC.csv",
-    "VJ": "KIT/KIT_VJ.csv",
-    "Open": "KIT/KIT_Open.csv",
-    "ST": "KIT/KIT_ST.csv",
-    "SC": "KIT/KIT_SC.csv",
-    "EWS": "KIT/KIT_EWS.csv",
-    "NT-B": "KIT/KIT_NT-B.csv",
-    "NT-C": "KIT/KIT_NT-C.csv",
-    "NT-D": "KIT/KIT_NT-D.csv"
+cast_models_GR1 = {
+    "OBC": "KIT\KIT-R1\G_OBC_R1.csv",
+    "VJ": "KIT\KIT-R1\G_VJ_R1.csv",
+    "OPEN": "KIT\KIT-R1\G_OPEN_R1.csv",
+    "ST": "KIT\KIT-R1\G_ST_R1.csv",
+    "SC": "KIT\KIT-R1\G_SC_R1.csv",
+    "EWS": "KIT\KIT-R1\G_EWS_R1.csv",
+    "NT-B": "KIT\KIT-R1\G_NT-B_R1.csv",
+    "NT-C": "KIT\KIT-R1\G_NT-C_R1.csv",
+    "NT-D": "KIT\KIT-R1\G_NT-D_R1.csv"
 }
 
-for cast, filename in cast_models.items():
+for cast, filename in cast_models_GR1.items():
     data = pd.read_csv(os.path.join(workpath, filename))
     model = DecisionTreeClassifier(random_state=42)
     feature = np.array(data[cast]).reshape(-1, 1)
-    model.fit(feature, data["Sr.No."])
-    joblib.dump(model, f"KIT{cast}Model.pkl")
-    joblib.dump(data, f"KIT{cast}ModelData.pkl")
+    model.fit(feature, data["Sr.No"])
+    joblib.dump(model, f"GR1_{cast}_Model.pkl")
+    joblib.dump(data, f"GR1_{cast}_Model_Data.pkl")
 
 
-cast_models1 = {
-    "OBC": "KIT\Lad_KIT_Cutoff_OBC.csv",
-    "VJ": "KIT/Lad_KIT_Cutoff_VJ.csv",
-    "OPEN": "KIT/Lad_KIT_Cutoff_Open.csv",
-    "ST": "KIT/Lad_KIT_Cutoff_ST.csv",
-    "SC": "KIT/Lad_KIT_Cutoff_SC.csv",
-    "EWS": "KIT/Lad_KIT_Cutoff_EWS.csv",
-    "NT-B": "KIT/Lad_KIT_Cutoff_NT-B.csv",
-    "NT-C": "KIT/Lad_KIT_Cutoff_NT-C.csv",
-    "NT-D": "KIT/Lad_KIT_Cutoff_NT-D.csv"
+cast_models_LR1 = {
+    "OBC": "KIT\KIT-R1\L_OBC_R1.csv",
+    "VJ": "KIT\KIT-R1\L_VJ_R1.csv",
+    "OPEN": "KIT\KIT-R1\L_OPEN_R1.csv",
+    "ST": "KIT\KIT-R1\L_ST_R1.csv",
+    "SC": "KIT\KIT-R1\L_SC_R1.csv",
+    "EWS": "KIT\KIT-R1\L_EWS_R1.csv",
+    "NT-B": "KIT\KIT-R1\L_NT-B_R1.csv",
+    "NT-C": "KIT\KIT-R1\L_NT-C_R1.csv",
+    "NT-D": "KIT\KIT-R1\L_NT-D_R1.csv"
 }
 
-for cast, filename in cast_models1.items():
+for cast, filename in cast_models_LR1.items():
     data = pd.read_csv(os.path.join(workpath, filename))
     model = DecisionTreeClassifier(random_state=42)
     feature = np.array(data[cast]).reshape(-1, 1)
-    model.fit(feature, data["Sr.No."])
-    joblib.dump(model, f"Lad_KIT{cast}Model.pkl")
-    joblib.dump(data, f"Lad_KIT{cast}ModelData.pkl")
+    model.fit(feature, data["Sr.No"])
+    joblib.dump(model, f"LR1_{cast}_Model.pkl")
+    joblib.dump(data, f"LR1_{cast}_Model_Data.pkl")
+
+################################################################
+cast_models_GR2 = {
+    "OBC": "KIT\KIT-R2\G_OBC_R2.csv",
+    "VJ": "KIT\KIT-R2\G_VJ_R2.csv",
+    "OPEN": "KIT\KIT-R2\G_OPEN_R2.csv",
+    "ST": "KIT\KIT-R2\G_ST_R2.csv",
+    "SC": "KIT\KIT-R2\G_SC_R2.csv",
+    "EWS": "KIT\KIT-R2\G_EWS_R2.csv",
+    "NT-B": "KIT\KIT-R2\G_NT-B_R2.csv",
+    "NT-C": "KIT\KIT-R2\G_NT-C_R2.csv",
+    "NT-D": "KIT\KIT-R2\G_NT-D_R2.csv"
+}
+
+for cast, filename in cast_models_GR2.items():
+    data = pd.read_csv(os.path.join(workpath, filename))
+    model = DecisionTreeClassifier(random_state=42)
+    feature = np.array(data[cast]).reshape(-1, 1)
+    model.fit(feature, data["Sr.No"])
+    joblib.dump(model, f"GR2_{cast}_Model.pkl")
+    joblib.dump(data, f"GR2_{cast}_Model_Data.pkl")
+
+
+cast_models_LR2 = {
+    "OBC": "KIT\KIT-R2\L_OBC_R2.csv",
+    "VJ": "KIT\KIT-R2\L_VJ_R2.csv",
+    "OPEN": "KIT\KIT-R2\L_OPEN_R2.csv",
+    "ST": "KIT\KIT-R2\L_ST_R2.csv",
+    "SC": "KIT\KIT-R2\L_SC_R2.csv",
+    "EWS": "KIT\KIT-R2\L_EWS_R2.csv",
+    "NT-B": "KIT\KIT-R2\L_NT-B_R2.csv",
+    "NT-C": "KIT\KIT-R2\L_NT-C_R2.csv",
+    "NT-D": "KIT\KIT-R2\L_NT-D_R2.csv"
+}
+
+for cast, filename in cast_models_LR2.items():
+    data = pd.read_csv(os.path.join(workpath, filename))
+    model = DecisionTreeClassifier(random_state=42)
+    feature = np.array(data[cast]).reshape(-1, 1)
+    model.fit(feature, data["Sr.No"])
+    joblib.dump(model, f"LR2_{cast}_Model.pkl")
+    joblib.dump(data, f"LR2_{cast}_Model_Data.pkl")

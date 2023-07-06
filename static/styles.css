@@ -8,8 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#ade0fe, #bbe1f7),
-    url("../images/taj.jpg");
+  background-image: linear-gradient(#94cfed, #9fd1f3);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,12 +40,12 @@ nav .menu {
 nav .menu a {
   width: 25%;
   text-decoration: none;
-  color: #212A3E;
+  color: #070707;
   font-weight: bold;
 }
 
 nav .menu a:first-child {
-  color: #00b894;
+  color: #080707;
 }
 
 main {
@@ -171,20 +170,10 @@ section a {
   right: 0;
 }
 
-    /* Styles for laptops and desktops */
-    @media (min-width: 992px) {
-      /* CSS styles for laptops/desktops */
-    }
+    
 
-    /* Styles for tablets */
-    @media (min-width: 768px) and (max-width: 991px) {
-      /* CSS styles for tablets */
-    }
 
-    /* Styles for mobile devices */
-    @media (max-width: 767px) {
-      /* CSS styles for mobile devices */
-    }
+
 
 
     

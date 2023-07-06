@@ -1,173 +1,301 @@
 <!DOCTYPE html>
-<html><link rel="stylesheet" href="static/kit.css"/>
-<link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Tangerine|Anton|Libre+Baskerville|Lobster" rel="stylesheet"  type="text/css">
-<body class="bk">
-  <h1 style="color:orange;">
-    <p align=center>
-  Kolhapur Institute Of Technology's<br>
-  College Of Engineering (Autonomous), Kolhapur<br>
-      (Accrediated by NAAC 'A')<br>
-          </p>
-  </h1>
-<div class="topnav" id="myTopnav">
-  <a href = "info">Home</a> 
-  <a href="#About">About the College</a> 
-  <a href="#Infra">Infrastructure</a> 
-  <a href="#Academics">Academics</a> 
-    <a href="#Placements">Placements</a> 
-   <a href="#How">How to reach Us</a> 
-    <a href="kitbranch" action="kitbranch">Predict Admission</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-
+<html>
 <head>
-<style>
-  .center{
-    margin-top: 30px;
-    margin-right: auto;
-}
-table,th,td{
-  font-family: "Open Sans", sans-serif;
-    border: 1px solid gray;
-    font-size: 18px;
-}
-th,td{
-       padding: 12px 25px;
-}
-table{
-    border-collapse: collapse;
-}
-tr:hover{
-    background-color: #ff6a00;
-}
-  </style>
+    <title>Kolhapur Institute Of Technology's College Of Engineering</title>
+    <link rel="stylesheet" href="static/kit.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Tangerine|Anton|Libre+Baskerville|Lobster" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+        }
+        
+        .bk {
+            background-color: #fff;
+            color: #333;
+        }
+        
+        h1 {
+            color: orange;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .topnav a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ff6a00;
+            color: #fff;
+        }
+        
+        .topnav a.icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        .center {
+            margin-top: 30px;
+            margin-right: auto;
+        }
+        
+        table,
+        th,
+        td {
+            font-family: "Open Sans", sans-serif;
+            border: 1px solid gray;
+            font-size: 18px;
+            padding: 12px 25px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        tr:hover {
+            background-color: #ff6a00;
+        }
+        
+        #Infra img {
+            margin-top: 10px;
+        }
+        
+        .green-text {
+            color: green;
+        }
+        
+        .bl-text {
+            color: blue;
+        }
+        
+        .red-text {
+            color: red;
+        }
+        
+        .bul-text {
+            font-size: 18px;
+        }
+        
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </head>
+<body class="bk">
+    <h1>Kolhapur Institute Of Technology's<br>College Of Engineering (Autonomous), Kolhapur<br>(Accredited by NAAC 'A')</h1>
+    <div class="topnav" id="myTopnav">
+        <a href="info">Home</a>
+        <a href="#About">About the College</a>
+        <a href="#Infra">Infrastructure</a>
+        <a href="#Academics">Academics</a>
+        <a href="#Placements">Placements</a>
+        <a href="#How">How to Reach Us</a>
+        <a href="kitbranch" action="kitbranch">Predict Admission</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
 
-<div class="target">
-<div id="About">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="table-responsive" data-pattern="priority-columns">
-          <table class ="center">
-  <thead>
-    <tr>
-      <th>Particulars</th>
-      <th data-priority="1">Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Established</td>
-      <td>1983</td>
-    </tr>
-    <tr>
-      <td>ColLege Type</td>
-      <td>Private (Autonomous)</td>
-    </tr>
-    <tr>
-      <td>Approved by</td>
-      <td> National Board of Accreditation (NBA), New Delhi </td>
-    </tr>
-    <tr>
-      <td>Accrediated by</td>
-      <td>NAAC "A Grade Status with CGPA 3.12"</td>
-    </tr>
-    <tr>
-      <td>Entrance Exams</td>
-      <td>MHT-CET | JEE-Mains</td>
-    </tr>
-    <tr>
-      <td>Courses Offered</td>
-      <td>Under Graduation</td>
-    </tr>
-    <tr>
-      <td>Facilities Available</td>
-      <td>Library, Sports, Auditorium,<br>Seminar Hall, AICTE Idea Lab, Hostel, Mess, Gymnasium.</td>
-    </tr>
-    <tr>
-      <td>Official Website</td>
-      <td ><a href="https://www.kitcoek.in/">www.kitcoek.in</a></td>
-    </tr>
-    <tr>
-      <td>Addmission Helpdesk</td>
-      <td>+917769001199 | +919168781199 </td>
-    </tr>
-    </tbody>
-  </table>
-</div><!--end of .table-responsive-->
-</div>
-</div>
-</div>
-</div>
-  
-  <div id="Infra">
-    <li>ClassRooms</li>
-   <img src="static\kitclassroom.jpeg" alt="" width=300px height=200px>
-    <p class="green-text">
-      Spacious, fully- furnished class rooms with neat desks and benches, light and fan facilities are being maintained in a proper manner, providing a clean and healthy environment conducive to study.
-    </p>
-    <li>Library</li>
-    <img src="static\library.jpeg" alt="" width=300px height=200px>
-    <p class="bl-text">
-      "Knowledge is power and library is the powerhouse". Books are the best teachers and counselors. To synchronize theory and practice, the journals, magazines and newspapers are very helpful. A Library is a collection of information, resources and services, organized for use, and maintained by a responsible body. Libraries inform the public of what materials are available in their collections and how to access that information. A modern Library provides educational resources to students and teachers through publications and other electronic media.
+    <div class="target">
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="table-responsive" data-pattern="priority-columns">
+                            <table class="center">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th data-priority="1">Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Established</td>
+                                        <td>1983</td>
+                                    </tr>
+                                    <tr>
+                                        <td>College Type</td>
+                                        <td>Private (Autonomous)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Approved by</td>
+                                        <td>National Board of Accreditation (NBA), New Delhi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accredited by</td>
+                                        <td>NAAC "A Grade Status with CGPA 3.12"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Entrance Exams</td>
+                                        <td>MHT-CET | JEE-Mains</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Courses Offered</td>
+                                        <td>Under Graduation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facilities Available</td>
+                                        <td>Library, Sports, Auditorium,<br>Seminar Hall, AICTE Idea Lab, Hostel, Mess, Gymnasium.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Official Website</td>
+                                        <td><a href="https://www.kitcoek.in/">www.kitcoek.in</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Admission Helpdesk</td>
+                                        <td>+917769001199 | +919168781199</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!--end of .table-responsive-->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-The library is spanned in a 3000 sqft building with air-conditioning facility and it can accommodate 350 students for reading.
+        <div id="Infra">
+            <ul>
+                <li>Classrooms</li>
+                <img src="static/kitclassroom.jpeg" alt="" width="300px" height="200px">
+                <p class="green-text">
+                    Spacious, fully-furnished classrooms with neat desks and benches, light and fan facilities are being maintained in a proper manner, providing a clean and healthy environment conducive to study.
+                </p>
+                <li>Library</li>
+                <img src="static/library.jpeg" alt="" width="300px" height="200px">
+                <p class="bl-text">
+                    "Knowledge is power and the library is the powerhouse". Books are the best teachers and counselors. To synchronize theory and practice, the journals, magazines, and newspapers are very helpful. A Library is a collection of information, resources, and services, organized for use, and maintained by a responsible body. Libraries inform the public of what materials are available in their collections and how to access that information. A modern Library provides educational resources to students and teachers through publications and other electronic media.
 
-The library is computerized and is well equipped with more than 7000 volumes of books various disciplines, 55 magazines and periodicals. The college has invested more than Rs 35 lakhs for the library in the last 4 years for the purchase of the books.
+                    The library is spanned in a 3000 sqft building with air-conditioning facility and it can accommodate 350 students for reading.
 
-The college spends a minimum of Rs 5 lakhs each year on the books and Rs 2 lakhs for subscribing the journals and periodicals.
-    </p>
-    <p class="red-text">
-    <li>Hostel</li>
-    <img src="static\boyshostel.jpeg" alt="" width=300px height=200px>
-    <img src="static\girlsshostel.jpeg" alt="" width=300px height=200px>
-    <p class="red-text">
-      Hostels for students reflect corporate fitness in design and functionality, with separate infrastructure for men and women. The campus hostels are again an opportunity for cross integration of student learning with corporate life where the student is able to share knowledge and learn from his mentors the workplace competencies. We have separate hostels for boys and girls. KIT-Boys Hostel & KIT-Girls Hostel. 
-    </p>
-  </div>
-    <div id="Academics">
-     
-           <table>
-            <tr>
-           <th> Departments </th></tr>
-         <tr> <td> Computer Science Engineering</td> </tr>
-         <tr> <td> Electronics & Telecommunication</td> </tr>
-          <tr><td> CSE(Artifical Intelligence & Machine learning)</td> </tr>
-            <tr> <td> CSE(Data Science)</td> </tr>
-              <tr> <td> Computer Science & Business Systems</td> </tr>
-                <tr><td> Electrical Engineering</td> </tr>
-                  <tr> <td> Mechanical Engineering</td> </tr>
-                    <tr> <td> Civil Engineering</td> </tr>
-                      <tr> <td> Biotechnology Engineering</td> </tr>
-                        <tr> <td> Civil & Environmental Engineering</td>
-           </tr>
-          </table>
-          </div>
-  <div id="Placements">
-    <p class="bul-text">
-      <table>
-        <tr>
-          <th>Packages</th>
-          <th>Salary in LPA</th>
-        </tr>
-        <tr>
-          <td>Highest Package</td>
-          <td>41 LPA</td>
-        </tr>
-        <tr>
-          <td>Average Package</td>
-          <td>4-5 LPA</td>
-        </tr>
-      </table>
-    </p>
-  </div>
-  <div id="How" class="map-responsive">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30581.298348594766!2d74.24438014373297!3d16.64370948224778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT&#39;s%20College%20of%20Engineering%20(An%20Autonomous%20Institute)!5e0!3m2!1sen!2sin!4v1685192533373!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"</iframe>
-  </div>
-      </div>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                    The library is computerized and is well equipped with more than 7000 volumes of books various disciplines, 55 magazines, and periodicals. The college has invested more than Rs 35 lakhs for the library in the last 4 years for the purchase of books.
 
+                    The college spends a minimum of Rs 5 lakhs each year on books and Rs 2 lakhs for subscribing to journals and periodicals.
+                </p>
+                <li>Hostel</li>
+                <img src="static/boyshostel.jpeg" alt="" width="300px" height="200px">
+                <img src="static/girlshostel.jpeg" alt="" width="300px" height="200px">
+                <p class="red-text">
+                    Hostels for students reflect corporate fitness in design and functionality, with separate infrastructure for men and women. The campus hostels are again an opportunity for cross integration of student learning with corporate life where the student is able to share knowledge and learn from his mentors the workplace competencies. We have separate hostels for boys and girls. KIT-Boys Hostel & KIT-Girls Hostel.
+                </p>
+            </ul>
+        </div>
+
+        <div id="Academics">
+            <table>
+                <tr>
+                    <th>Departments</th>
+                </tr>
+                <tr>
+                    <td>Computer Science Engineering</td>
+                </tr>
+                <tr>
+                    <td>Electronics & Telecommunication</td>
+                </tr>
+                <tr>
+                    <td>CSE (Artificial Intelligence & Machine learning)</td>
+                </tr>
+                <tr>
+                    <td>CSE (Data Science)</td>
+                </tr>
+                <tr>
+                    <td>Computer Science & Business Systems</td>
+                </tr>
+                <tr>
+                    <td>Electrical Engineering</td>
+                </tr>
+                <tr>
+                    <td>Mechanical Engineering</td>
+                </tr>
+                <tr>
+                    <td>Civil Engineering</td>
+                </tr>
+                <tr>
+                    <td>Biotechnology Engineering</td>
+                </tr>
+                <tr>
+                    <td>Civil & Environmental Engineering</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Placements">
+            <p class="bul-text">
+                <table>
+                    <tr>
+                        <th>Packages</th>
+                        <th>Salary in LPA</th>
+                    </tr>
+                    <tr>
+                        <td>Highest Package</td>
+                        <td>41 LPA</td>
+                    </tr>
+                    <tr>
+                        <td>Average Package</td>
+                        <td>4-5 LPA</td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+
+        <div id="How" class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30581.298348594766!2d74.24438014373297!3d16.719509438229256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf6bc44622f317%3A0xfa1ddc3c38c4cc51!2sKIT%27S%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1623367246761!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
 </html>

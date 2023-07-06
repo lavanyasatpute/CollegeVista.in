@@ -1,4 +1,2 @@
-ram = [{'name':'Lavanya','marks':56,'branch':'Cse'},{'name':'pavan','marks':99,'branch':'AIML'},{'name':'Lavanya','marks':98,'branch':'ENTC'},{'name':'shivam','marks':95,'branch':'DS'},{'name':'Lavanya','marks':88,'branch':'ELE'}]
-for row in ram:
-    if row['name']=='Lavanya':
-        print(row)
+x='85'
+print(type(x))

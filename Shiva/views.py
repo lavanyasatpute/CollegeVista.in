@@ -7,7 +7,7 @@ from django.http import FileResponse
 import pymongo
 from pymongo.server_api import ServerApi
 from .tests import lavanya, generate_pdf
-from .kitprediction import kit1,ladkit
+from .kitprediction import GKIT_R1,LKIT_R1,LKIT_R2,GKIT_R2
 import threading
 
 def empty(request):
@@ -48,27 +48,44 @@ def branch(request):
         Percentile = request.POST.get('Percentile')
         cast = request.POST.get('cast')
         gender = request.POST.get('gender')
-        if not(cast and Percentile and gender):
-            return HttpResponse("Please Enter the Persentile and cast")
-        else:
-            if gender=='male':
-                t = threading.Thread(target=kit1, args=(Percentile, cast))
-                t.start()
-                pavan = kit1(Percentile, cast)
-                t.join()
+        Round = request.POST.get('Round')
+        if Round == "Round1":
+            if not(cast and Percentile and gender):
+                return HttpResponse("Please Enter the Persentile and cast")
             else:
-                t = threading.Thread(target=ladkit, args=(Percentile, cast))
-                t.start()
-                pavan = ladkit(Percentile, cast)
-                t.join()
-            context = {'pavan': pavan}
-            return render(request, 'Resultkit.html', context)
+                if gender=='male':
+                    t = threading.Thread(target=GKIT_R1, args=(Percentile, cast))
+                    t.start()
+                    pavan = GKIT_R1(Percentile, cast)
+                    t.join()
+                else:
+                    t = threading.Thread(target=LKIT_R1, args=(Percentile, cast))
+                    t.start()
+                    pavan = LKIT_R1(Percentile, cast)
+                    t.join()
+        else:
+            if not(cast and Percentile and gender):
+                return HttpResponse("Please Enter the Persentile and cast")
+            else:
+                if gender=='male':
+                    t = threading.Thread(target=GKIT_R2, args=(Percentile, cast))
+                    t.start()
+                    pavan = GKIT_R2(Percentile, cast)
+                    t.join()
+                else:
+                    t = threading.Thread(target=LKIT_R2, args=(Percentile, cast))
+                    t.start()
+                    pavan = LKIT_R2(Percentile, cast)
+                    t.join()
+        context = {'pavan': pavan}
+        return render(request, 'Resultkit.html', context)
+
     
 def filter(request):
     global filtered_pavan
     if request.method == 'POST':
         branchFilter = request.POST.get('branchFilter')
-        Cityfilter = request.POST.get('Cityfilter')
+        #Cityfilter = request.POST.get('Cityfilter')
         if not(branchFilter):
             return HttpResponse("Please enter the Branch")
         else:

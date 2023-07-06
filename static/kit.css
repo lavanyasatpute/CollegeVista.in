@@ -1,13 +1,11 @@
-[3:00 pm, 05/06/2023] Shivam Saidane AIML: <style>
-		header {
+header {
 		height: 100vh;
 		background-image: linear-gradient(#ffffff, #ffffff),
 		  url("../images/taj.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 	    }
-	</style>
-[3:04 pm, 05/06/2023] Shivam Saidane AIML: body{
+body{
       font-family: "Open Sans", sans-serif;
 }
 body .h1{
