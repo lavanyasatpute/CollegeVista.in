@@ -1,88 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title></title>
+	<title>CollegeVista</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="static/styles.css">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<style>
+		/* CSS reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* Add CSS rules for responsive design */
+		/* Mobile */
+		@media only screen and (max-width: 600px) {
+			/* Adjust logo size for mobile */
+			.logo {
+				width: 100px;
+			}
+
+			/* Center align the menu items */
+			.menu {
+				text-align: center;
+			}
+
+			/* Adjust main section layout for mobile */
+			main {
+				padding: 20px;
+			}
+
+			/* Logo and menu container */
+			.logo-container,
+			.menu-container {
+				text-align: center;
+			}
+
+			/* Adjust menu styles for mobile */
+			.menu-container {
+				margin-top: 10px;
+			}
+
+			.menu-container a {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			/* Center align the login/signup label */
+			.modal-btn {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		/* Tablet and larger */
+		@media only screen and (min-width: 601px) {
+			/* Adjust logo size for tablet and larger */
+			.logo {
+				width: 150px;
+			}
+
+			/* Logo and menu container */
+			.logo-container,
+			.menu-container {
+				display: flex;
+				align-items: center;
+			}
+
+			/* Adjust menu styles for desktop */
+			.menu-container {
+				margin-left: auto;
+			}
+
+			.menu-container a {
+				margin-left: 20px;
+			}
+
+			/* Align the login/signup label to the right */
+			.modal-btn {
+				margin-left: auto;
+			}
+		}
+
+		header li img {
+			width: 220px;
+			float: left;
+			margin-top: -0px;
+		}
+	</style>
 </head>
 <body>
 	<header>
 		<nav>
-			<div class="logo"></div>
-			<img src="static/CollegeVistaLogo.jpeg" alt="Logo" height="50px" width="250px">
-			<div class="menu">
+			<div class="logo-container">
+				<div class="logo"></div>
+				<li><img src="static\CollegeVista.png" alt="Logo"></li>
+			</div>
+			<div class="menu-container">
 				<a href="#">Home</a>
-				<a href="kit.com">About</a>
-				<a href="kit" target="_blank">KITCoEK</a>
-				<a><center>
+				<a href="#">About</a>
+					<a href="kit" target="_blank">KITCoEK</a>
+				<a>
 					<label class="modal-btn" for="modal-toggle">Login/Signup</label>
-
-				</center></a>
+				</a>
 			</div>
 		</nav>
-			<main>
-				<section>
-					<div class="rt-container">
-						<div class="col-rt-12">
-						    <div class="Scriptcontent">
-						    
-					    <!-- Login Form Popup HTML -->
-					    
-					<input id="modal-toggle" type="checkbox">
-					<label class="modal-backdrop" for="modal-toggle"></label>
-					<div class="modal-content">
-					    <label class="modal-close-btn" for="modal-toggle">
-							  <svg width="30" height="30">
-						  <line x1="5" y1="5" x2="20" y2="20"/>
-							    <line x1="20" y1="5" x2="5" y2="20"/>
-							  </svg>
-						  </label>
-					    <div class="tabs">
-				  <!--  LOG IN  -->
-						  <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
-						  <label for="tab-1" class="table"><span>Login</span></label>
-						  <div class="tabs-content">
-						     
-						     <form method="POST" enctype="multipart/form-data" action="login">
-								{% csrf_token %}
-							   <input type="email" name="email" id="email" placeholder="Email" required>
-							   <input type="password" name="pass1" id="pass1" placeholder="Password" required>
-							   <input type="submit" name="login" value="login">
-						     </form>
-						  </div>
-				  <!--  SIGN UP  -->
-						  <input class="radio" id="tab-2" name="tabs-name" type="radio">
-						  <label for="tab-2" class="table"><span>Sign up</span></label>
-						  <div class="tabs-content">
-						     <form method="POST" enctype="multipart/form-data" action="signup">
-								{% csrf_token %}
-							   <input type="email" name="email" id="email" placeholder="Email" required>
-							   <input type="password" name="pass1" id="pass1" placeholder="password" required>
-							   <input type="password" name="pass2" id="pass2" placeholder="Confirm password" required>
-							   <input type="submit" name="Register" value="Register">
-						     </form>
-						  </div>
-					    </div>
-					</div>
-				  <!-- partial -->
-				  
-							
-						 
+
+		<main>
+			<section>
+				<div class="rt-container">
+					<div class="col-rt-12">
+						<div class="Scriptcontent">
+							<!-- Login Form Popup HTML -->
+							<input id="modal-toggle" type="checkbox">
+							<label class="modal-backdrop" for="modal-toggle"></label>
+							<div class="modal-content">
+								<label class="modal-close-btn" for="modal-toggle">
+									<svg width="30" height="30">
+										<line x1="5" y1="5" x2="20" y2="20"/>
+										<line x1="20" y1="5" x2="5" y2="20"/>
+									</svg>
+								</label>
+								<div class="tabs">
+									<!--  LOG IN  -->
+									<input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+									<label for="tab-1" class="table"><span>Login</span></label>
+									<div class="tabs-content">
+										<form method="POST" enctype="multipart/form-data" action="login">
+											{% csrf_token %}
+											<input type="email" name="email" id="email" placeholder="Email" required>
+											<input type="password" name="pass1" id="pass1" placeholder="Password" required>
+											<input type="submit" name="login" value="login">
+										</form>
+									</div>
+									<!--  SIGN UP  -->
+									<input class="radio" id="tab-2" name="tabs-name" type="radio">
+									<label for="tab-2" class="table"><span>Sign up</span></label>
+									<div class="tabs-content">
+										<form method="POST" enctype="multipart/form-data" action="signup">
+											{% csrf_token %}
+											<input type="email" name="email" id="email" placeholder="Email" required>
+											<input type="password" name="pass1" id="pass1" placeholder="password" required>
+											<input type="password" name="pass2" id="pass2" placeholder="Confirm password" required>
+											<input type="submit" name="Register" value="Register">
+										</form>
+									</div>
+								</div>
 							</div>
-						  </div>
+							<!-- partial -->
+						</div>
 					</div>
-				  </section>
-		<form method="post" enctype="multipart/form-data" action="predict">
+				</div>
+			</section>
+			<form method="post" enctype="multipart/form-data" action="predict" onsubmit="return validateForm()">
 				{% csrf_token %}
 				<section>
 					<h3>Welcome To CollegeVista</h3>
 					<h1>MHT-CET College Predictor</h1>
 					<div>
 						<label for="cast">Choose a Caste:</label>
-						<select name="cast" id="cast">
+						<select name="cast" id="cast" required>
 							<option value="">Please Select a Category</option>
 							<option value="SC">SC</option>
 							<option value="ST">ST</option>
@@ -96,19 +176,41 @@
 						</select><br><br>
 						<form class="w3-container">
 							<label>Enter Percentile</label>
-							<input class="number_input" type="float" id="Percentile" name="Percentile">
+							<input class="number_input" type="float" id="Percentile" name="Percentile" required>
 						</form><br><br>
 						<input class="w3-radio" type="radio" name="gender" value="male" checked>
 						<label>Male</label>
-						<input class="w3-radio" type="radio" name="gender" value="female">
+						<input class="w3-radio" type="radio" name="gender" value="female" checked>
 						<label>Female</label>
+						<br>
+						<label>Enter Number of Colleges Required</label>
+						<input class="w3-input" type="float" id="number" name="number" required>
+						<br><br>
+						<label>enter the specific branch</label>
+						<input class="w3-input" id="spec_branch" name="spec_branch">
+						<br><br>
+
 					</div>
-					
-						<button class ="button" type="submit" value="SUBMIT"><span>SUBMIT</span></button>
-					
+
+					<button class="button" type="submit" value="SUBMIT"><span>SUBMIT</span></button>
 				</section>
-			</main>
-		</form>
+			</form>
+		</main>
 	</header>
+	<script>
+        function validateForm() {
+            var cast = document.getElementById("cast").value;
+            var Percentile = document.getElementById("Percentile").value;
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            var errorText1 = "1,2,3,4,5,6,7,8,9,0,.";
+			var errorText = "";
+            if (!nameRegex.test(cast)) {
+                errorText += "Please select the cast";
+            }
+			if (!errorText1.test(Percentile)) {
+                errorText += "Please select the Percentile";
+            }
+        }
+    </script>
 </body>
 </html>

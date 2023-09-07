@@ -1,94 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Table Display with Branch Filter</title>
+    <title>CollegeVista Branch Filter</title>
     <style>
-        .pholder{
-            position: absolute;
-            top: 8px;
-            right: 780px;
-            background: white;
-            border: solid 2px black;
-            padding: .375em 1.125em;
+        /* Common styles for both mobile and desktop */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the content */
+        .center {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        /* Common styles for both mobile and desktop */
+        select {
+            width: 15%;
+            margin: 8px 0;
             font-size: 1rem;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 2px solid #180033;
         }
-        .label{
+
+        .pholder,
+        .label,
+        .pdf,
+        .logout {
+            background: #ffffff;
+            border: 2px solid #180033;
+            padding: 8px;
             font-size: 1rem;
-            position: absolute;
-            top: 10px;
-            right: 1025px;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
         }
-        .pdf{
-            position: absolute;
-            top: 8px;
-            right : 480px;
+
+        /* Style the header */
+        header {
+            background-color: #180033;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
         }
-        button{
-            background: white;
-            border: solid 2px black;
-            padding: .375em 1.125em;
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #180033;
+            color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Style the buttons */
+        button {
+            background-color: #180033;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
             font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
         }
-        .logout{
-            position: absolute;
-            top: 8px;
-            right: 340px;
-                }
-            .center{
-                margin-top: 60px;
-                margin-left: auto;
-                margin-right: auto;
+
+        button:hover {
+            background-color: #310066;
+        }
+
+        /* Responsive table styles */
+        @media (max-width: 600px) {
+            table, th, td {
+                display: block;
             }
-            table,th,td{
-                border: 1px solid gray;
+
+            th, td {
+                text-align: left;
+                padding: 10px;
             }
-            th,td{
-                   padding: 5px 15px;
+
+            th {
+                background-color: #180033;
+                color: #ffffff;
             }
-            table{
-                border-collapse: collapse;
-            }
-            tr:hover{
-                background-color: gray;
-            }
+        }
     </style>
 </head>
 <body>
-    <form method="post" action="filter">
-        {% csrf_token %}
-        <label>Filter by Branch:</label>
-        <input class ="pholder" type="text" id="branchFilter" name="branchFilter" placeholder="Enter branch name">
-        <button type="submit">Filter</button>
-    </form>
-    <table class="center" id="collegeTable">
-        <thead>
-            <tr>
-                <th>College Name</th>
-                <th>Branch</th>
-                <th>Percentile</th>
-               
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in pavan %}
-                <tr class="college-row">
-                    <td>{{ row.Colleges }}</td>
-                    <td>{{ row.Branches }}</td>      
-                    <td >{{ row.Percentile }}</td>
-                    
+    <header>
+        <h1>Predicted Branch of KIT college Kolhapur</h1>
+    </header>
+    <div class="center">
+        <table>
+            <thead>
+                <tr>
+                    <th>College Name</th>
+                    <th>Branch</th>
+                    <th>Percentile</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    
-    <form class = "pdf" method="POST" action='pdf'>
-        {% csrf_token %}
-        <button type="submit">Create a PDF file</button>
-    </form>
-    <form class = "logout" method="POST" action='info'>
-        {% csrf_token %}
-        <button type="submit">Logout</button>
-    </form>
+            </thead>
+            <tbody>
+                {% for row in pavan %}
+                    <tr class="college-row">
+                        <td>{{ row.Colleges }}</td>
+                        <td>{{ row.Branches }}</td>
+                        <td>{{ row.Percentile }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form class="pdf" method="POST" action="pdf">
+            {% csrf_token %}
+            <button type="submit">Create a PDF file</button>
+        </form>
+        <form class="logout" method="POST" action="info">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </div>
 </body>
 </html>

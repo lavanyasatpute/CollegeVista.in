@@ -12,4 +12,8 @@ class User(models.Model):
     def __str__(self):
         return str(self.id)
 #my_instance = User()
-#my_instance.save()   
+#my_instance.save()
+
+
+class UserCount(models.Model):
+    count = models.IntegerField(default=0)

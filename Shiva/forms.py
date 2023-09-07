@@ -23,4 +23,3 @@ class authenticate(UserCreationForm):
 
         return user        
 
-
