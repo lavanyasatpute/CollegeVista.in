@@ -15,7 +15,7 @@ def empty(request):
 
 def index(request):
     return render(request, 'home.html')
-
+   
 def logout(request):
     return render(request, "Signup.html")
 
@@ -34,11 +34,14 @@ def predict(request):
         global pavan
         pavan = lavanya(Percentile, cast)
         t.join()
-        number = int(number)
-        if (len(pavan) <= number):
-            pavan = [pavan[i] for i in range(len(pavan))]
+        if not(number):
+            pass
         else:
-            pavan = [pavan[i] for i in range(number)]
+            number = int(number)
+            if (len(pavan) <= number):
+                pavan = [pavan[i] for i in range(len(pavan))]
+            else:
+                pavan = [pavan[i] for i in range(number)]
         if not(spec_branch):
             context = {'pavan': pavan}
             return render(request, 'FilterBranch.html', context)
