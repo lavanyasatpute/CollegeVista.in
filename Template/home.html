@@ -20,29 +20,10 @@
 		/* Add CSS rules for responsive design */
 		/* Mobile */
 		@media only screen and (max-width: 600px) {
-			body {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				margin: 0;
-			}
-
-			form {
-				text-align: center;
-				padding: 20px;
-				padding-top: 30px;
-				border: 1px solid #ccc;
-				border-radius: 10px;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-				margin-top: 50px;
-			}
 
 			/* Adjust logo size for mobile */
 			.logo {
-				width: 50px;
-				margin: auto;
-
+				width: 100px;
 			}
 
 			/* Center align the menu items */
@@ -77,40 +58,6 @@
 				text-align: center;
 			}
 		}
-
-		.menu-container {
-			display: none;
-			/* Hide the menu initially in mobile view */
-			text-align: center;
-			/* Center-align the menu items */
-			margin-top: 10px;
-		}
-
-		.menu-button {
-			display: block;
-			/* Show the button */
-			text-align: center;
-			/* Center-align the button */
-			cursor: pointer;
-			/* Add a pointer cursor to indicate it's clickable */
-		}
-
-		.menu-container.show {
-			display: block;
-			/* Show the menu when the "show" class is applied */
-		}
-
-		.menu-button:after {
-			content: '☰';
-			/* Display the hamburger icon in the button */
-			font-size: 24px;
-			/* Adjust the size of the icon */
-			line-height: 50px;
-			/* Vertically center the icon in the button */
-			display: block;
-			/* Display the icon as a block element */
-		}
-
 
 		/* Tablet and larger */
 		@media only screen and (min-width: 601px) {
@@ -183,16 +130,13 @@
 			/* Add a shadow when focused */
 		}
 
-		Form {
-			text-align: center;
-			padding: 20px auto;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			margin: 50px auto;
-			/* Center-align vertically and horizontally */
-			max-width: 4000px;
-			/* Optionally set a max-width for the form */
+		input[type="radio"] {
+			cursor: pointer;
+			display: inline;
+		}
+		.Mainform{
+			margin-bottom: 20px;
+			table-layout: 40px;
 		}
 	</style>
 </head>
@@ -204,7 +148,6 @@
 				<div class="logo"></div>
 				<li><img src="static\CollegeVista.png" alt="Logo"></li>
 			</div>
-			<span class="menu-button" onclick="toggleMenu()">&#977;</span>
 			<div class="menu-container">
 				<a href="#">Home</a>
 				<a href="#">About</a>
@@ -264,47 +207,63 @@
 					</div>
 				</div>
 			</section>
-			<div class="Form">
-				<form method="post" enctype="multipart/form-data" onsubmit="return checkInput()" action="predict">
-					{% csrf_token %}
+			<form method="post" enctype="multipart/form-data" onsubmit="return checkInput()" action="predict">
+				{% csrf_token %}
+				<table>
 					<section>
-						<h3 style="background-color: #ccc;">Welcome To CollegeVista</h3>
+						<h3 style="background-color: #ccc; width: 500px; margin-left: 150px;margin-top: 400px;">Welcome
+							To CollegeVista</h3>
 						<h1>MHT-CET College Predictor</h1>
-						<div>
-							<label class="required" for="cast">Choose a Caste:</label>
-							<select name="cast" id="cast" required>
-								<option value="">Please Select Category</option>
-								<option value="SC">SC</option>
-								<option value="ST">ST</option>
-								<option value="OBC">OBC</option>
-								<option value="VJ">VJ</option>
-								<option value="Open">OPEN</option>
-								<option value="NT-B">NT-B</option>
-								<option value="NT-C">NT-C</option>
-								<option value="NT-D">NT-D</option>
-								<option value="EWS">EWS</option>
-							</select><br><br>
+						<div class="Mainform">
+							<tr>
+								<td><label class="required" for="cast">Choose a Caste:</label></td>
+								<td><select name="cast" id="cast" required>
+										<option value="">Please Select Category</option>
+										<option value="SC">SC</option>
+										<option value="ST">ST</option>
+										<option value="OBC">OBC</option>
+										<option value="VJ">VJ</option>
+										<option value="Open">OPEN</option>
+										<option value="NT-B">NT-B</option>
+										<option value="NT-C">NT-C</option>
+										<option value="NT-D">NT-D</option>
+										<option value="EWS">EWS</option>
+									</select></td>
+							</tr><br><br>
 							<form class="w3-container">
-								<label class="required1" for="Percentile">Enter Percentile:</label>
-								<input class="number_input" type="float" id="Percentile" name="Percentile"
-									placeholder="Percentile" required>
-								<br>
-								<label>Enter the number of colleges you required:</label>
-								<input type="float" id="number" name="number">
-								<br>
-								<label>Enter the specific branch:</label>
-								<input type="float" id="spec_branch" name="spec_branch"
-									placeholder="Full Form of Branch">
-							</form><br><br>
-							<input class="w3-radio" type="radio" name="gender" value="male" checked>
-							<label>Male</label>
-							<input class="w3-radio" type="radio" name="gender" value="female">
-							<label>Female</label>
-						</div>
-						<button class="button" type="submit" value="SUBMIT"><span>SUBMIT</span></button>
+								<tr>
+
+									<td><label class="required1" for="Percentile">Enter Percentile:</label></td>
+									<td><input class="number_input" type="float" id="Percentile" name="Percentile"
+											placeholder="Percentile" required></td>
+								</tr><br>
+								<tr>
+									<td><label>Enter the number of colleges you required:</label></td>
+									<td><input type="float" id="number" name="number"></td>
+								</tr><br>
+								<tr>
+									<td><label>Enter the specific branch:</label></td>
+									<td><input type="float" id="spec_branch" name="spec_branch"
+											placeholder="Full Form of Branch"></td>
+								</tr>
+							</form>
+							<br><br>
+							<tr>
+								<td><label for="general">General</label></td>
+								<td><input class="w3-radio" type="radio" id="general" name="gender" value="male"
+										checked></td>
+							</tr>
+							<tr>
+								<td><label for="female">Female</label></td>
+								<td><input class="w3-radio" id="female" type="radio" name="gender" value="female"></td>
+							</tr>
+						</div><br>
+						<tr>
+							<td><button class="button" type="submit" value="SUBMIT"><span>SUBMIT</span></button></td>
+						</tr>
 					</section>
-				</form>
-			</div>
+				</table>
+			</form>
 		</main>
 	</header>
 	<script>
@@ -339,12 +298,7 @@
 
 			return true; // Form submission is allowed when all inputs are valid.
 		}
-		function toggleMenu() {
-			var menuContainer = document.querySelector('.menu-container');
-			menuContainer.classList.toggle('show');
-		}
 	</script>
-
 </body>
 
 </html>

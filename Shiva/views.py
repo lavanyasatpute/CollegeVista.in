@@ -11,10 +11,10 @@ from .kitprediction import GKIT_R1,LKIT_R1,LKIT_R2,GKIT_R2
 import threading
 
 def empty(request):
-    return HttpResponse("Please Enter the Valid Url......")
+    return render(request,"Preloader.html")
 
 def index(request):
-    return render(request, 'home.html')
+    return render(request, 'New_Home_Page-1.html')
    
 def logout(request):
     return render(request, "Signup.html")
@@ -46,7 +46,7 @@ def predict(request):
             context = {'pavan': pavan}
             return render(request, 'FilterBranch.html', context)
         else:
-            pavan = [pavan1 for pavan1 in pavan if pavan1['Branches'] == spec_branch]
+            pavan = [pavan1 for pavan1 in pavan if spec_branch.lower() in pavan1['Branches'].lower()]
             context = {'pavan': pavan}
             return render(request, 'FilterBranch.html', context)
           
@@ -106,7 +106,7 @@ def filter(request):
         if not(branchFilter):
             return HttpResponse("Please enter the Branch")
         else:
-            filtered_pavan = [pavan1 for pavan1 in pavan if pavan1['Branches'] == branchFilter]
+            filtered_pavan = [pavan1 for pavan1 in pavan if branchFilter.lower() in pavan1['Branches'].lower()]
             context = {'filtered_pavan': filtered_pavan}
             return render(request, 'NewResult.html', context)
 

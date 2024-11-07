@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+
+        nav {
+            background-color: #f9f1f1;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+        a {
+            display: block;
+            color: rgb(8, 6, 6);
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 5px;
+
+        }
+
+        a:hover {
+            background-color: #ddd;
+            color: rgb(12, 12, 12);
+        }
+
+        .image1 {
+            float: left;
+            width: 30%;
+            padding-top: 150px;
+            margin-left: 10%;
+            transform: scale(1.5);
+        }
+
+        .image2 {
+            width: 150px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            margin-top: -80px;
+            margin-left: 25px;
+        }
+
+        .image3 {
+            width: 500px;
+            margin-left: 200px;
+            position: relative;
+            visibility: visible;
+            margin-top: 50px;
+        }
+
+        .contener-1 {
+            overflow-y: auto;
+            max-height: 80vh;
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            float: right;
+            margin-left: 800px;
+            margin-top: -290px;
+            position: absolute;
+        }
+        
+
+        input[type="number"] {
+            width: 200px;
+
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 13px;
+            background-color: #f2f2f2;
+
+        }
+
+        select[type="text"] {
+            width: 200px;
+
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 13px;
+            background-color: #f2f2f2;
+
+        }
+
+        .contener-1:hover {
+            transform: scale(1.3);
+            transition: 0.9s;
+        }
+
+        .contener-1:not(:hover) {
+            transform: scale(0.8);
+            transition: transform 0.9s ease;
+        }
+
+        .centered-div {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #eb2424;
+            border-radius: 5px;
+        }
+
+        .opt {
+            font-size: 20px;
+        }
+
+        button {
+            margin-left: 40%;
+            border-radius: 30px;
+        }
+        button:hover{
+            background-color: rgb(130, 130, 216);
+        }
+
+        .nav {
+            border-radius: 30px;
+        }
+
+        .search-container {
+            border-radius: 6px;
+            position: absolute;
+            margin-top: -60px;
+            margin-left: 20%;
+        }
+
+        aside.app {
+            position: relative;
+        }
+
+        .h1 {
+            float: right;
+            margin-right: 20%;
+        }
+
+        .socialApp {
+            visibility: hidden;
+        }
+
+        .link1 {
+            visibility: visible;
+            float:right; 
+            margin-right: 250px;
+            width: 100px;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border-color: chartreuse;
+            
+        }
+        .link2 {
+            visibility: visible;
+            float:right; 
+            margin-right: 250px;
+            width: 100px;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border-color: chartreuse;
+            display: inline-block;
+            margin: 3px;
+        }
+        .link2:hover{
+            background-color: rgb(141, 141, 233);
+        }
+        .link3 {
+            visibility: visible;
+            float:right; 
+            margin-right: 250px;
+            width: 100px;
+            height: 50px;
+            margin-top: -50px;
+            border-radius: 30px;
+            border-color: chartreuse;
+
+        }
+        .link3:hover{
+            background-color: rgb(141, 141, 233);
+        }
+
+        .Heading1{
+            float: right;
+            margin-right: 130px;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showApp(a,b) {
+            var x = document.getElementById(a);
+            var y = document.getElementById(b);
+            var visible1 = x.style.visibility;
+            var visible2 = y.style.visibility;
+
+            if (visible1 == 'visible' && visible2 == 'hidden') {
+                visible1 = 'hidden';
+                visible2 = 'visible';
+                x.style.visibility = visible1;
+                y.style.visibility = visible2;
+            } else {
+                visible1 = 'visible';
+                visible2 = 'hidden';
+                x.style.visibility = visible1;
+                y.style.visibility = visible2;
+            }
+        }
+        // function Hide() {
+        //     var x = document.getElementById('hide1');
+        //     var visible = x.style.visibility;
+
+        //     if (visible == 'visible') {
+        //         visible = 'hidden';
+        //         x.style.visibility = visible;
+        //     } else {
+        //         visible = 'visible';
+        //         x.style.visibility = 'visible';
+        //     }
+        // }
+        // function toggleContainer() {
+        //     var container = document.getElementById("app2");
+        //     container.style.display = (container.style.display === "none") ? "block" : "none";
+        // }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="kit" target="_blank">KITCoEK</a></li>
+        </ul>
+    </nav>
+
+    <img class="image2" src="static/CollegeVista.png" alt="Logo">
+    <img class="image1" src="static/Crop_College_Boy.png" alt="Description of the image"><br>
+
+
+    <div class="search-container">
+        <form action="/search" method="get">
+            <input type="text" placeholder="Search..." name="q" required>
+            <input type="submit" value="Search" placeholder="Search">
+        </form>
+    </div>
+    <aside class="apps">
+        <h1 class="Heading1">College Predictor 2024</h1>
+
+        <div class="link1">
+            <button class="link2" id="hide2" type="submit" onclick="showApp('app1','hide1')">MHT-CET</button> 
+            <button class="link3"  type="submit">JEE</button>
+        </div>
+
+        <img class="image3" src="static/Bullet_Point.png" id="hide1" alt="Bullet_Point">
+
+        <span class="socialApp" id="app1">
+            <div class="contener-1" id="app2">
+                <div class="centered-div">
+                    <form method="post" action="predict">
+                        {% csrf_token %}
+                        <h2><b>PREDICT COLLEGES:</b></h2>
+                        <label class="required" for="cast">Choose a Caste:</label><br>
+                        <select type="text" name="cast" id="cast" required>
+                            <option value="" class="opt">Please Select Category</option>
+                            <option value="SC" class="opt">SC</option>
+                            <option value="ST" class="opt">ST</option>
+                            <option value="OBC" class="opt">OBC</option>
+                            <option value="VJ" class="opt">VJ</option>
+                            <option value="Open" class="opt">OPEN</option>
+                            <option value="NT-B" class="opt">NT-B</option>
+                            <option value="NT-C" class="opt">NT-C</option>
+                            <option value="NT-D" class="opt">NT-D</option>
+                            <option value="EWS" class="opt">EWS</option>
+                        </select><br><br>
+                        <label class="required1" for="Percentile">Enter Percentile:</label><br>
+                        <input class="number_input" type="number" id="Percentile" name="Percentile"
+                            placeholder="Percentile" required>
+                        <br><br>
+                        <label>Enter the number of colleges you required:</label><br>
+                        <input type="number" id="number" name="number"><br><br>
+                        <label for="general">General</label>
+                        <input class="w3-radio" type="radio" id="general" name="gender" value="male" checked>
+                        <br>
+                        <label for="female">Female</label>
+                        <input class="w3-radio" id="female" type="radio" name="gender" value="female"><br><br>
+                        <button class="button" type="submit" value="SUBMIT"><span>SUBMIT</span></button>
+
+                    </form>
+                </div>
+            </div>
+        </span>
+    </aside>
+    <footer>Copyright © 2023 CollegeVista Pvt Ltd.</footer>
+</body>
+
+</html>

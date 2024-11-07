@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader7 {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            position: relative;
+            margin-top: 200px;
+        
+        }
+
+        .loader7 .loader-inner-1,
+        .loader7 .loader-inner-2,
+        .loader7 .loader-inner-3,
+        .loader7 .loader-inner-4 {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            position: absolute;
+            
+        }
+
+        .loader7 .loader-inner-1:before,
+        .loader7 .loader-inner-2:before,
+        .loader7 .loader-inner-3:before,
+        .loader7 .loader-inner-4:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            position: absolute;
+            right: 0;
+            animation-name: loading-7;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-duration: 2s
+        }
+
+        .loader7 .loader-inner-1 {
+            top: 0;
+            left: 0;
+            transform: rotate(70deg)
+        }
+
+        .loader7 .loader-inner-1:before {
+            background: #06aed5
+        }
+
+        .loader7 .loader-inner-2 {
+            top: 0;
+            right: 0;
+            transform: rotate(160deg)
+        }
+
+        .loader7 .loader-inner-2:before {
+            background: #b4a4ae
+        }
+
+        .loader7 .loader-inner-3 {
+            bottom: 0;
+            right: 0;
+            transform: rotate(-110deg)
+        }
+
+        .loader7 .loader-inner-3:before {
+            background: #106e5c
+        }
+
+        .loader7 .loader-inner-4 {
+            bottom: 0;
+            left: 0;
+            transform: rotate(-20deg)
+        }
+
+        .loader7 .loader-inner-4:before {
+            background: #030a26
+        }
+
+        @keyframes loading-7 {
+            0% {
+                width: 20px;
+                right: 0
+            }
+
+            30% {
+                width: 120px;
+                right: -100px
+            }
+
+            60% {
+                width: 20px;
+                right: -100px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <br /><br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader7">
+                    <span class="loader-inner-1"></span>
+                    <span class="loader-inner-2"></span>
+                    <span class="loader-inner-3"></span>
+                    <span class="loader-inner-4"></span>
+                </div>
+            </div>
+        </div>
+        <h3 class="h3" style="text-align: center; margin-top: 70px;">Please kindly wait while the page is loading...</h3>
+        <br /><br />
+    </div>
+    <script>
+        const timeDelay = 3000;
+
+        // Use setTimeout to delay the transition to the main page
+        setTimeout(function () {
+            window.location.href = '/info';
+        }, timeDelay);
+    </script>
+</body>
+
+</html>

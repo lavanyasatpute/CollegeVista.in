@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .contener-1 {
+            overflow-y: auto;
+            max-height: 80vh;
+            width: 25%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            margin-right: -30%;
+        }
+
+        input[type="number"] {
+            width: 200px;
+
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 13px;
+            background-color: #f2f2f2;
+
+        }
+
+        select[type="text"] {
+            width: 200px;
+
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 13px;
+            background-color: #f2f2f2;
+
+        }
+
+        .contener-1:hover {
+            transform: scale(1.5);
+            transition: 0.9s;
+        }
+
+        .contener-1:not(:hover) {
+            transform: scale(1);
+            transition: transform 0.9s ease;
+        }
+
+        .centered-div {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #eb2424;
+            border-radius: 5px;
+        }
+
+        .opt {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <section class="contener-1">
+        <div class="centered-div">
+            <form method="post" action="Predict">
+                <h2><b>PREDICT COLLEGES:</b></h2>
+                <label class="required" for="cast">Choose a Caste:</label><br>
+                <select type="text" name="cast" id="cast" required>
+                    <option value="" class="opt">Please Select Category</option>
+                    <option value="SC" class="opt">SC</option>
+                    <option value="ST" class="opt">ST</option>
+                    <option value="OBC" class="opt">OBC</option>
+                    <option value="VJ" class="opt">VJ</option>
+                    <option value="Open" class="opt">OPEN</option>
+                    <option value="NT-B" class="opt">NT-B</option>
+                    <option value="NT-C" class="opt">NT-C</option>
+                    <option value="NT-D" class="opt">NT-D</option>
+                    <option value="EWS" class="opt">EWS</option>
+                </select><br><br>
+                <label class="required1" for="Percentile">Enter Percentile:</label><br>
+                <input class="number_input" type="number" id="Percentile" name="Percentile" placeholder="Percentile"
+                    required>
+                <br><br>
+                <label>Enter the number of colleges you required:</label><br>
+                <input type="number" id="number" name="number"><br><br>
+                <label for="general">General</label>
+                <input class="w3-radio" type="radio" id="general" name="gender" value="male" checked>
+
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
+
+</html>

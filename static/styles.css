@@ -1,13 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   margin: 5;
   padding: 5;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Open sans", sans-serif;
 }
 
 body {
   width: 100%;
   height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ade0fe), to(#bbe1f7)),
+    url("../images/taj.jpg");
+  background-image: -o-linear-gradient(#ade0fe, #bbe1f7),
+    url("../images/taj.jpg");
   background-image: linear-gradient(#ade0fe, #bbe1f7),
     url("../images/taj.jpg");
   background-repeat: no-repeat;
@@ -19,9 +31,15 @@ nav {
   height: 15vh;
   background: #ffffff;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
 }
 
@@ -34,8 +52,11 @@ nav {
 
 nav .menu {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 nav .menu a {
@@ -52,9 +73,15 @@ nav .menu a:first-child {
 main {
   width: 100%;
   height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   padding-bottom: 10cm;
   color: #212A3E;
@@ -80,7 +107,8 @@ select {
   margin: 8px 0;
   font-size: 1.35rem;
   padding: 2px 5px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 2px solid #180033;
   font-family: "Open Sans", sans-serif;
 }
@@ -96,7 +124,8 @@ width: 28%;
 padding: 12px 20px;
 font-size: medium;
 margin: 8px 0;
-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
 } 
 input[type=float]:focus{
 border: 1px solid #555;
@@ -108,6 +137,7 @@ font-weight: 550;
 height: 2em;
 line-height: 1.1;
 display: inline-block;
+-ms-grid-rows: 1em 0.5em auto;
 grid-template-rows: 1em auto;
 gap: 0.5em;
 }
@@ -126,10 +156,13 @@ section a {
   font-weight: 550;
   text-decoration: none;
   letter-spacing: 1px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: absolute ;
   bottom: 320px;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .button {
   display: inline-block;
@@ -141,6 +174,8 @@ section a {
   font-size: 28px;
   padding: 16px;
   width: 200px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -150,6 +185,8 @@ section a {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -159,6 +196,8 @@ section a {
   opacity: 0;
   top: 0;
   right: -20px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
